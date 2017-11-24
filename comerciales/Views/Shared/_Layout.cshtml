@@ -11,7 +11,7 @@
 		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
 
 		<!-- WEB FONTS -->
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;subset=latin,latin-ext,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css" />
+	
 
 		<!-- CORE CSS -->
 		<link href=@Url.Content("~/assets/plugins/bootstrap/css/bootstrap.min.css") rel="stylesheet" type="text/css" />
@@ -40,18 +40,24 @@
 							</a>
 							<ul>
 								<li><a href="#">Clientes</a></li>
-								<li><a href="#">Productos</a></li>
+								<li><a href="/Productos">Productos</a></li>
 							</ul>
 						</li>
                     </ul>
 					<h3>Configuración</h3>
 					<ul class="nav nav-list">
 						<li>
-							<a href="#">
+							<a href="/Empresa/Edit">
 								<i class="main-icon fa fa-university"></i>
-								<span>Sucursales</span>
+								<span>Empresa</span>
 							</a>
 						</li>
+                        <li>
+                            <a href="/Sucursales">
+                                <i class="main-icon fa fa-pencil-square-o"></i>
+                                <span>Sucursales</span>
+                            </a>
+                        </li>
 					</ul>
 				</nav>
 				<span id="asidebg"></span>
