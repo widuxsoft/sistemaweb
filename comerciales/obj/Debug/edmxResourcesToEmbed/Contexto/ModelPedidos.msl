@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="db_pedidosModelStoreContainer" CdmEntityContainer="db_pedidosContext">
+    <EntitySetMapping Name="tam_empresas">
+      <EntityTypeMapping TypeName="db_pedidosModel.Empresa">
+        <MappingFragment StoreEntitySet="tam_empresas">
+          <ScalarProperty Name="cod_empresa" ColumnName="cod_empresa" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="razon_social" ColumnName="razon_social" />
+          <ScalarProperty Name="cuit" ColumnName="cuit" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="fecha_creacion" ColumnName="fecha_creacion" />
+          <ScalarProperty Name="fecha_baja" ColumnName="fecha_baja" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tam_sucursales">
+      <EntityTypeMapping TypeName="db_pedidosModel.Sucursal">
+        <MappingFragment StoreEntitySet="tam_sucursales">
+          <ScalarProperty Name="cod_empresa" ColumnName="cod_empresa" />
+          <ScalarProperty Name="cod_sucursal" ColumnName="cod_sucursal" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="calle" ColumnName="calle" />
+          <ScalarProperty Name="numero" ColumnName="numero" />
+          <ScalarProperty Name="depto" ColumnName="depto" />
+          <ScalarProperty Name="piso" ColumnName="piso" />
+          <ScalarProperty Name="cod_localidad" ColumnName="cod_localidad" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="caracteristicca" ColumnName="caracteristicca" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="fecha_creacion" ColumnName="fecha_creacion" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tap_empresas">
+      <EntityTypeMapping TypeName="db_pedidosModel.tap_empresa">
+        <MappingFragment StoreEntitySet="tap_empresas">
+          <ScalarProperty Name="cod_empresa" ColumnName="cod_empresa" />
+          <ScalarProperty Name="cod_parametro" ColumnName="cod_parametro" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

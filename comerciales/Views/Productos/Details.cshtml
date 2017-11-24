@@ -1,0 +1,145 @@
+﻿@model comerciales.Contexto.tam_productos
+
+@{
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <h4>tam_productos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Cod. Producto
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cod_producto)
+        </dd>
+
+        <dt>
+            Nombre
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+
+        <dt>
+            Descripción
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcion)
+        </dd>
+
+        <dt>
+            Precio Costo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precio_costo)
+        </dd>
+
+        <dt>
+            Precio Venta
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precio_venta)
+        </dd>
+
+        <dt>
+            Precio Recarga
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precio_recarga)
+        </dd>
+
+        <dt>
+           Margen
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.margen)
+        </dd>
+
+        <dt>
+            Estado
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estado)
+        </dd>
+
+        <dt>
+            Marca
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cod_marca)
+        </dd>
+
+        <dt>
+            Color
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cod_color)
+        </dd>
+
+        <dt>
+            Capacidad
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.capacidad_nominal)
+        </dd>
+
+        <dt>
+            Fecha Creación
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha_creacion)
+        </dd>
+
+        <dt>
+            Rubro
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tamp_rubros.descripcion)
+        </dd>
+
+        <dt>
+            Subrubro
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tam_subrubros.descripcion)
+        </dd>
+
+        <dt>
+            Agente
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tap_tablas.valor)
+        </dd>
+
+        <dt>
+            Tipo de Fuego
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tap_tablas1.valor)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="255d8184395b4ed98f6384aee61ab68a" Name="Diagram1">
+        <EntityTypeShape EntityType="db_pedidosModel.tam_empresas" Width="1.5" PointX="0.75" PointY="1" />
+        <EntityTypeShape EntityType="db_pedidosModel.tap_empresas" Width="1.5" PointX="0.5" PointY="4.5" />
+        <AssociationConnector Association="db_pedidosModel.FK_tap_empresas_tam_empresas" />
+        <EntityTypeShape EntityType="db_pedidosModel.tam_localidades" Width="1.5" PointX="6.125" PointY="2.75" />
+        <EntityTypeShape EntityType="db_pedidosModel.tam_provincias" Width="1.5" PointX="6.25" PointY="0.75" />
+        <AssociationConnector Association="db_pedidosModel.FK_tam_localidades_tam_provincias" />
+        <EntityTypeShape EntityType="db_pedidosModel.tam_sucursales" Width="1.5" PointX="3.5" PointY="0.625" />
+        <AssociationConnector Association="db_pedidosModel.FK_tam_sucursales_tam_empresas" />
+        <AssociationConnector Association="db_pedidosModel.FK_tam_sucursales_tam_localidades" />
+        <EntityTypeShape EntityType="db_pedidosModel.tam_productos" Width="1.5" PointX="8.5" PointY="3.75" />
+        <EntityTypeShape EntityType="db_pedidosModel.tam_subrubros" Width="1.5" PointX="5.25" PointY="7.875" />
+        <EntityTypeShape EntityType="db_pedidosModel.tamp_rubros" Width="1.5" PointX="3" PointY="7.875" />
+        <EntityTypeShape EntityType="db_pedidosModel.tap_parametros" Width="1.5" PointX="8.375" PointY="0.75" />
+        <EntityTypeShape EntityType="db_pedidosModel.tap_productos_imagen" Width="1.5" PointX="10.75" PointY="5.375" />
+        <EntityTypeShape EntityType="db_pedidosModel.tap_tablas" Width="1.5" PointX="6.25" PointY="11.375" />
+        <AssociationConnector Association="db_pedidosModel.FK_tam_productos_tam_empresas" />
+        <AssociationConnector Association="db_pedidosModel.FK_tamp_rubros_tam_empresas" />
+        <AssociationConnector Association="db_pedidosModel.FK_tam_productos_tam_subrubros1" />
+        <AssociationConnector Association="db_pedidosModel.FK_tam_productos_tamp_rubros1" />
+        <AssociationConnector Association="db_pedidosModel.FK_tam_productos_tap_tablas" />
+        <AssociationConnector Association="db_pedidosModel.FK_tam_productos_tap_tablas1" />
+        <AssociationConnector Association="db_pedidosModel.FK_tap_productos_imagen_tam_productos1" />
+        <AssociationConnector Association="db_pedidosModel.FK_tam_subrubros_tamp_rubros1" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

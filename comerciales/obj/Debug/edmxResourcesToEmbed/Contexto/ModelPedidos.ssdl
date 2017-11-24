@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="db_pedidosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tam_empresas">
+    <Key>
+      <PropertyRef Name="cod_empresa" />
+    </Key>
+    <Property Name="cod_empresa" Type="numeric" Precision="10" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="30" />
+    <Property Name="razon_social" Type="varchar" MaxLength="30" />
+    <Property Name="cuit" Type="varchar" MaxLength="10" />
+    <Property Name="estado" Type="char" MaxLength="10" />
+    <Property Name="fecha_creacion" Type="datetime" />
+    <Property Name="fecha_baja" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="tam_sucursales">
+    <Key>
+      <PropertyRef Name="cod_empresa" />
+      <PropertyRef Name="cod_sucursal" />
+    </Key>
+    <Property Name="cod_empresa" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="cod_sucursal" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="30" />
+    <Property Name="calle" Type="varchar" MaxLength="30" />
+    <Property Name="numero" Type="numeric" Precision="5" Scale="0" />
+    <Property Name="depto" Type="varchar" MaxLength="2" />
+    <Property Name="piso" Type="varchar" MaxLength="2" />
+    <Property Name="cod_localidad" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="telefono" Type="varchar" MaxLength="11" />
+    <Property Name="caracteristicca" Type="varchar" MaxLength="5" />
+    <Property Name="mail" Type="varchar" MaxLength="50" />
+    <Property Name="fecha_creacion" Type="datetime" />
+    <Property Name="estado" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="tap_empresas">
+    <Key>
+      <PropertyRef Name="cod_empresa" />
+      <PropertyRef Name="cod_parametro" />
+    </Key>
+    <Property Name="cod_empresa" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="cod_parametro" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="50" />
+    <Property Name="valor" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK_tam_sucursales_tam_empresas">
+    <End Role="tam_empresas" Type="Self.tam_empresas" Multiplicity="1" />
+    <End Role="tam_sucursales" Type="Self.tam_sucursales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tam_empresas">
+        <PropertyRef Name="cod_empresa" />
+      </Principal>
+      <Dependent Role="tam_sucursales">
+        <PropertyRef Name="cod_empresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tap_empresas_tam_empresas">
+    <End Role="tam_empresas" Type="Self.tam_empresas" Multiplicity="1" />
+    <End Role="tap_empresas" Type="Self.tap_empresas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tam_empresas">
+        <PropertyRef Name="cod_empresa" />
+      </Principal>
+      <Dependent Role="tap_empresas">
+        <PropertyRef Name="cod_empresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="db_pedidosModelStoreContainer">
+    <EntitySet Name="tam_empresas" EntityType="Self.tam_empresas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tam_sucursales" EntityType="Self.tam_sucursales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tap_empresas" EntityType="Self.tap_empresas" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_tam_sucursales_tam_empresas" Association="Self.FK_tam_sucursales_tam_empresas">
+      <End Role="tam_empresas" EntitySet="tam_empresas" />
+      <End Role="tam_sucursales" EntitySet="tam_sucursales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tap_empresas_tam_empresas" Association="Self.FK_tap_empresas_tam_empresas">
+      <End Role="tam_empresas" EntitySet="tam_empresas" />
+      <End Role="tap_empresas" EntitySet="tap_empresas" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
