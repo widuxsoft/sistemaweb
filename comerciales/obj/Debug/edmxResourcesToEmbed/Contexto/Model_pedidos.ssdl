@@ -20,6 +20,14 @@
     <Property Name="cod_localidad" Type="numeric" Precision="10" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="descripcion" Type="varchar" MaxLength="50" />
   </EntityType>
+  <EntityType Name="tam_marcas">
+    <Key>
+      <PropertyRef Name="cod_marca" />
+    </Key>
+    <Property Name="cod_empresa" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="cod_marca" Type="numeric" Precision="10" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="50" />
+  </EntityType>
   <EntityType Name="tam_productos">
     <Key>
       <PropertyRef Name="id" />
@@ -145,6 +153,18 @@
       </Principal>
       <Dependent Role="tam_productos">
         <PropertyRef Name="cod_empresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tam_productos_tam_marcas1">
+    <End Role="tam_marcas" Type="Self.tam_marcas" Multiplicity="0..1" />
+    <End Role="tam_productos" Type="Self.tam_productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tam_marcas">
+        <PropertyRef Name="cod_marca" />
+      </Principal>
+      <Dependent Role="tam_productos">
+        <PropertyRef Name="cod_marca" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -283,6 +303,7 @@
   <EntityContainer Name="db_pedidosModelStoreContainer">
     <EntitySet Name="tam_empresas" EntityType="Self.tam_empresas" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tam_localidades" EntityType="Self.tam_localidades" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tam_marcas" EntityType="Self.tam_marcas" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tam_productos" EntityType="Self.tam_productos" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tam_provincias" EntityType="Self.tam_provincias" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tam_subrubros" EntityType="Self.tam_subrubros" Schema="dbo" store:Type="Tables" />
@@ -298,6 +319,10 @@
     </AssociationSet>
     <AssociationSet Name="FK_tam_productos_tam_empresas" Association="Self.FK_tam_productos_tam_empresas">
       <End Role="tam_empresas" EntitySet="tam_empresas" />
+      <End Role="tam_productos" EntitySet="tam_productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tam_productos_tam_marcas1" Association="Self.FK_tam_productos_tam_marcas1">
+      <End Role="tam_marcas" EntitySet="tam_marcas" />
       <End Role="tam_productos" EntitySet="tam_productos" />
     </AssociationSet>
     <AssociationSet Name="FK_tam_productos_tam_subrubros1" Association="Self.FK_tam_productos_tam_subrubros1">

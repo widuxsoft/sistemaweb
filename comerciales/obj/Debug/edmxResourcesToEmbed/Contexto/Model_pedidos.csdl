@@ -60,6 +60,11 @@
       <End Role="tamp_rubros" EntitySet="tamp_rubros" />
       <End Role="tam_subrubros" EntitySet="tam_subrubros" />
     </AssociationSet>
+    <EntitySet Name="tam_marcas" EntityType="db_pedidosModel.tam_marcas" />
+    <AssociationSet Name="FK_tam_productos_tam_marcas1" Association="db_pedidosModel.FK_tam_productos_tam_marcas1">
+      <End Role="tam_marcas" EntitySet="tam_marcas" />
+      <End Role="tam_productos" EntitySet="tam_productos" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="tam_empresas">
     <Key>
@@ -203,6 +208,7 @@
     <NavigationProperty Name="tap_tablas" Relationship="db_pedidosModel.FK_tam_productos_tap_tablas" FromRole="tam_productos" ToRole="tap_tablas" />
     <NavigationProperty Name="tap_tablas1" Relationship="db_pedidosModel.FK_tam_productos_tap_tablas1" FromRole="tam_productos" ToRole="tap_tablas" />
     <NavigationProperty Name="tap_productos_imagen" Relationship="db_pedidosModel.FK_tap_productos_imagen_tam_productos1" FromRole="tam_productos" ToRole="tap_productos_imagen" />
+    <NavigationProperty Name="tam_marcas" Relationship="db_pedidosModel.FK_tam_productos_tam_marcas1" FromRole="tam_productos" ToRole="tam_marcas" />
   </EntityType>
   <EntityType Name="tam_subrubros">
     <Key>
@@ -350,6 +356,27 @@
       </Principal>
       <Dependent Role="tam_subrubros">
         <PropertyRef Name="cod_rubro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tam_marcas">
+    <Key>
+      <PropertyRef Name="cod_marca" />
+    </Key>
+    <Property Name="cod_empresa" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
+    <Property Name="cod_marca" Type="Decimal" Nullable="false" Precision="10" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tam_productos" Relationship="db_pedidosModel.FK_tam_productos_tam_marcas1" FromRole="tam_marcas" ToRole="tam_productos" />
+  </EntityType>
+  <Association Name="FK_tam_productos_tam_marcas1">
+    <End Type="db_pedidosModel.tam_marcas" Role="tam_marcas" Multiplicity="0..1" />
+    <End Type="db_pedidosModel.tam_productos" Role="tam_productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tam_marcas">
+        <PropertyRef Name="cod_marca" />
+      </Principal>
+      <Dependent Role="tam_productos">
+        <PropertyRef Name="cod_marca" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

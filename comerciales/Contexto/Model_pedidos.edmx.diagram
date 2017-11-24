@@ -28,6 +28,8 @@
         <AssociationConnector Association="db_pedidosModel.FK_tam_productos_tap_tablas1" />
         <AssociationConnector Association="db_pedidosModel.FK_tap_productos_imagen_tam_productos1" />
         <AssociationConnector Association="db_pedidosModel.FK_tam_subrubros_tamp_rubros1" />
+        <EntityTypeShape EntityType="db_pedidosModel.tam_marcas" Width="1.5" PointX="10.375" PointY="0.875" />
+        <AssociationConnector Association="db_pedidosModel.FK_tam_productos_tam_marcas1" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

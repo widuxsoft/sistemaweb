@@ -46,5 +46,6 @@ namespace comerciales.Contexto
         public virtual tap_tablas tap_tablas1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tap_productos_imagen> tap_productos_imagen { get; set; }
+        public virtual tam_marcas tam_marcas { get; set; }
     }
 }

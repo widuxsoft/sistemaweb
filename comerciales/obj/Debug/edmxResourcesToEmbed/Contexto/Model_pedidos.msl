@@ -136,5 +136,14 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="tam_marcas">
+      <EntityTypeMapping TypeName="db_pedidosModel.tam_marcas">
+        <MappingFragment StoreEntitySet="tam_marcas">
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="cod_marca" ColumnName="cod_marca" />
+          <ScalarProperty Name="cod_empresa" ColumnName="cod_empresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

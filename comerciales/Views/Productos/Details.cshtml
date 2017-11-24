@@ -4,142 +4,170 @@
     ViewBag.Title = "Detalles";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<header id="page-header">
+    <i class="glyphicon glyphicon-list-alt"></i>
+    <h1> Datos De La Empresa</h1>
+</header>
+<div class="panel-heading panel-heading-transparent">
+    <div id="panel-misc-portlet-color-r3" class="panel panel-primary">
 
-<div>
-    <h4>tam_productos</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            Cod. Producto
-        </dt>
+        <div class="panel-heading">
 
-        <dd>
-            @Html.DisplayFor(model => model.cod_producto)
-        </dd>
+            <span class="elipsis">
+                <!-- panel title -->
+                <strong>Detalle Sucursal</strong>
+            </span>
 
-        <dt>
-            Nombre
-        </dt>
+            <!-- right options -->
+            <ul class="options pull-right list-inline">
+                <li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="" data-placement="bottom"></a></li>
+                <li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
 
-        <dd>
-            @Html.DisplayFor(model => model.nombre)
-        </dd>
+            </ul>
+            <!-- /right options -->
 
-        <dt>
-            Descripción
-        </dt>
+        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.descripcion)
-        </dd>
+        <!-- panel content -->
+        <div class="panel-body">
+            <div>
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        Cod. Producto
+                    </dt>
 
-        <dt>
-            Precio Costo
-        </dt>
+                    <dd>
+                        @Html.EditorFor(model => model.cod_producto, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.precio_costo)
-        </dd>
+                    <dt>
+                        Nombre
+                    </dt>
 
-        <dt>
-            Precio Venta
-        </dt>
+                    <dd>
+                        @Html.EditorFor(model => model.nombre, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.precio_venta)
-        </dd>
+                    <dt>
+                        Descripción
+                    </dt>
 
-        <dt>
-            Precio Recarga
-        </dt>
+                    <dd>
+                        @Html.EditorFor(model => model.descripcion, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.precio_recarga)
-        </dd>
+                    <dt>
+                        Precio Costo
+                    </dt>
 
-        <dt>
-           Margen
-        </dt>
+                    <dd>
+                        @Html.EditorFor(model => model.precio_costo, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.margen)
-        </dd>
+                    <dt>
+                        Precio Venta
+                    </dt>
 
-        <dt>
-            Estado
-        </dt>
+                    <dd>
+                        @Html.EditorFor(model => model.precio_venta, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.estado)
-        </dd>
+                    <dt>
+                        Precio Recarga
+                    </dt>
 
-        <dt>
-            Marca
-        </dt>
+                    <dd>
+                        @Html.EditorFor(model => model.precio_recarga, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.cod_marca)
-        </dd>
+                    <dt>
+                        Margen
+                    </dt>
 
-        <dt>
-            Color
-        </dt>
+                    <dd>
+                        @Html.EditorFor(model => model.margen, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.cod_color)
-        </dd>
+                    <dt>
+                        Estado
+                    </dt>
 
-        <dt>
-            Capacidad
-        </dt>
+                    <dd>
+                        @Html.EditorFor(model => model.estado, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.capacidad_nominal)
-        </dd>
+                    <dt>
+                        Marca
+                    </dt>
 
-        <dt>
-            Fecha Creación
-        </dt>
+                    <dd>
+                        @Html.EditorFor(model => model.tam_marcas.descripcion , new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.fecha_creacion)
-        </dd>
+                    <dt>
+                        Color
+                    </dt>
 
-        <dt>
-            Rubro
-        </dt>
+                    <dd>
+                        @Html.EditorFor(model => model.cod_color, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.tamp_rubros.descripcion)
-        </dd>
+                    <dt>
+                        Capacidad
+                    </dt>
 
-        <dt>
-            Subrubro
-        </dt>
+                    <dd>
+                        @Html.EditorFor(model => model.capacidad_nominal, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.tam_subrubros.descripcion)
-        </dd>
+                    <dt>
+                        Fecha Creación
+                    </dt>
 
-        <dt>
-            Agente
-        </dt>
+                    <dd>
+                        @Html.EditorFor(model => model.fecha_creacion, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.tap_tablas.valor)
-        </dd>
+                    <dt>
+                        Rubro
+                    </dt>
 
-        <dt>
-            Tipo de Fuego
-        </dt>
+                    <dd>
+                        @Html.EditorFor(model => model.tamp_rubros.descripcion , new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.tap_tablas1.valor)
-        </dd>
+                    <dt>
+                        Subrubro
+                    </dt>
 
-    </dl>
+                    <dd>
+                        @Html.EditorFor(model => model.tam_subrubros.descripcion , new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
+
+                    <dt>
+                        Agente
+                    </dt>
+
+                    <dd>
+                        @Html.EditorFor(model => model.tap_tablas.valor , new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
+
+                    <dt>
+                        Tipo de Fuego
+                    </dt>
+
+                    <dd>
+                        @Html.EditorFor(model => model.tap_tablas1.valor , new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
+
+                </dl>
+            </div>
+            <p>
+                <button type="button" class="btn btn-primary" onclick="location.href= '@Url.Action("edit",new { id=Model.id })'">Editar</button>
+                <button type="button" class="btn btn-info" onclick="location.href= '@Url.Action("index")'">Volver</button> 
+            </p>
+        </div>
+        <!-- /panel content -->
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
