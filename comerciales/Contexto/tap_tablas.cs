@@ -19,6 +19,7 @@ namespace comerciales.Contexto
         {
             this.tam_productos = new HashSet<tam_productos>();
             this.tam_productos1 = new HashSet<tam_productos>();
+            this.tam_clientes = new HashSet<tam_clientes>();
         }
     
         public decimal cod_tabla { get; set; }
@@ -30,5 +31,7 @@ namespace comerciales.Contexto
         public virtual ICollection<tam_productos> tam_productos { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tam_productos> tam_productos1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tam_clientes> tam_clientes { get; set; }
     }
 }

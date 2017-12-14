@@ -21,6 +21,8 @@ namespace comerciales.Contexto
             this.tam_sucursales = new HashSet<tam_sucursales>();
             this.tam_productos = new HashSet<tam_productos>();
             this.tamp_rubros = new HashSet<tamp_rubros>();
+            this.tam_clientes = new HashSet<tam_clientes>();
+            this.tam_pedidos = new HashSet<tam_pedidos>();
         }
     
         public decimal cod_empresa { get; set; }
@@ -39,5 +41,9 @@ namespace comerciales.Contexto
         public virtual ICollection<tam_productos> tam_productos { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tamp_rubros> tamp_rubros { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tam_clientes> tam_clientes { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tam_pedidos> tam_pedidos { get; set; }
     }
 }

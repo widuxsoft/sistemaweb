@@ -30,6 +30,17 @@
         <AssociationConnector Association="db_pedidosModel.FK_tam_subrubros_tamp_rubros1" />
         <EntityTypeShape EntityType="db_pedidosModel.tam_marcas" Width="1.5" PointX="10.375" PointY="0.875" />
         <AssociationConnector Association="db_pedidosModel.FK_tam_productos_tam_marcas1" />
+        <EntityTypeShape EntityType="db_pedidosModel.tam_clientes" Width="1.5" PointX="11.5" PointY="8.75" />
+        <EntityTypeShape EntityType="db_pedidosModel.tam_pedidos" Width="1.5" PointX="16.75" PointY="5.375" />
+        <EntityTypeShape EntityType="db_pedidosModel.tar_pedidos_detall" Width="1.5" PointX="13.75" PointY="5.125" />
+        <AssociationConnector Association="db_pedidosModel.FK_clientes_documento" />
+        <AssociationConnector Association="db_pedidosModel.FK_tam_clientes_tam_empresas" />
+        <AssociationConnector Association="db_pedidosModel.FK_tam_clientes_tam_localidades" />
+        <AssociationConnector Association="db_pedidosModel.FK_tam_pedidos_tam_clientes" />
+        <AssociationConnector Association="db_pedidosModel.FK_tam_pedidos_tam_empresas" />
+        <AssociationConnector Association="db_pedidosModel.FK_tam_pedidos_tam_localidades" />
+        <AssociationConnector Association="db_pedidosModel.FK_tar_pedidos_detall_tam_pedidos1" />
+        <AssociationConnector Association="db_pedidosModel.FK_tar_pedidos_detall_tam_productos1" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

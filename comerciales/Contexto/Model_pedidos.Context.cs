@@ -37,5 +37,8 @@ namespace comerciales.Contexto
         public virtual DbSet<tap_productos_imagen> tap_productos_imagen { get; set; }
         public virtual DbSet<tap_tablas> tap_tablas { get; set; }
         public virtual DbSet<tam_marcas> tam_marcas { get; set; }
+        public virtual DbSet<tam_clientes> tam_clientes { get; set; }
+        public virtual DbSet<tam_pedidos> tam_pedidos { get; set; }
+        public virtual DbSet<tar_pedidos_detall> tar_pedidos_detall { get; set; }
     }
 }

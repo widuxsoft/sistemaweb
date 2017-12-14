@@ -145,5 +145,64 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="tam_clientes">
+      <EntityTypeMapping TypeName="db_pedidosModel.tam_clientes">
+        <MappingFragment StoreEntitySet="tam_clientes">
+          <ScalarProperty Name="nro_documento" ColumnName="nro_documento" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="cod_localidad" ColumnName="cod_localidad" />
+          <ScalarProperty Name="lote" ColumnName="lote" />
+          <ScalarProperty Name="manzana" ColumnName="manzana" />
+          <ScalarProperty Name="piso" ColumnName="piso" />
+          <ScalarProperty Name="depto" ColumnName="depto" />
+          <ScalarProperty Name="numero" ColumnName="numero" />
+          <ScalarProperty Name="calle" ColumnName="calle" />
+          <ScalarProperty Name="fecha_creacion" ColumnName="fecha_creacion" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="caracteristica" ColumnName="caracteristica" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="cod_tipo_doc" ColumnName="cod_tipo_doc" />
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="cod_empresa" ColumnName="cod_empresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tam_pedidos">
+      <EntityTypeMapping TypeName="db_pedidosModel.tam_pedidos">
+        <MappingFragment StoreEntitySet="tam_pedidos">
+          <ScalarProperty Name="cod_localidad" ColumnName="cod_localidad" />
+          <ScalarProperty Name="lote" ColumnName="lote" />
+          <ScalarProperty Name="manzana" ColumnName="manzana" />
+          <ScalarProperty Name="piso" ColumnName="piso" />
+          <ScalarProperty Name="depto" ColumnName="depto" />
+          <ScalarProperty Name="numero" ColumnName="numero" />
+          <ScalarProperty Name="calle" ColumnName="calle" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="fecha_finalizado" ColumnName="fecha_finalizado" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="fecha_creacion" ColumnName="fecha_creacion" />
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="cod_empresa" ColumnName="cod_empresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tar_pedidos_detall">
+      <EntityTypeMapping TypeName="db_pedidosModel.tar_pedidos_detall">
+        <MappingFragment StoreEntitySet="tar_pedidos_detall">
+          <ScalarProperty Name="id_producto" ColumnName="id_producto" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="fecha_estado" ColumnName="fecha_estado" />
+          <ScalarProperty Name="fecha_creacion" ColumnName="fecha_creacion" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="id_pedido" ColumnName="id_pedido" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

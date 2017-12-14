@@ -18,6 +18,7 @@ namespace comerciales.Contexto
         public tam_productos()
         {
             this.tap_productos_imagen = new HashSet<tap_productos_imagen>();
+            this.tar_pedidos_detall = new HashSet<tar_pedidos_detall>();
         }
     
         public decimal cod_empresa { get; set; }
@@ -47,5 +48,7 @@ namespace comerciales.Contexto
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tap_productos_imagen> tap_productos_imagen { get; set; }
         public virtual tam_marcas tam_marcas { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tar_pedidos_detall> tar_pedidos_detall { get; set; }
     }
 }

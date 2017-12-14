@@ -5,6 +5,29 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="db_pedidosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tam_clientes">
+          <Key>
+            <PropertyRef Name="id_cliente" />
+          </Key>
+          <Property Name="cod_empresa" Type="numeric" Precision="10" Scale="0" />
+          <Property Name="id_cliente" Type="numeric" Precision="10" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="cod_tipo_doc" Type="numeric" Precision="10" Scale="0" />
+          <Property Name="apellido" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="telefono" Type="varchar" MaxLength="11" />
+          <Property Name="caracteristica" Type="varchar" MaxLength="5" />
+          <Property Name="email" Type="varchar" MaxLength="50" />
+          <Property Name="estado" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="fecha_creacion" Type="datetime" />
+          <Property Name="calle" Type="varchar" MaxLength="50" />
+          <Property Name="numero" Type="numeric" Precision="5" Scale="0" />
+          <Property Name="depto" Type="varchar" MaxLength="2" />
+          <Property Name="piso" Type="varchar" MaxLength="2" />
+          <Property Name="manzana" Type="varchar" MaxLength="2" />
+          <Property Name="lote" Type="varchar" MaxLength="2" />
+          <Property Name="cod_localidad" Type="numeric" Precision="10" Scale="0" />
+          <Property Name="NOMBRE" Type="varchar" MaxLength="30" />
+          <Property Name="nro_documento" Type="numeric" Precision="15" Scale="0" />
+        </EntityType>
         <EntityType Name="tam_empresas">
           <Key>
             <PropertyRef Name="cod_empresa" />
@@ -32,6 +55,24 @@
           <Property Name="cod_empresa" Type="numeric" Precision="10" Scale="0" Nullable="false" />
           <Property Name="cod_marca" Type="numeric" Precision="10" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="descripcion" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tam_pedidos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="cod_empresa" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="id_cliente" Type="numeric" Precision="10" Scale="0" />
+          <Property Name="fecha_creacion" Type="datetime" />
+          <Property Name="estado" Type="char" MaxLength="1" />
+          <Property Name="fecha_finalizado" Type="datetime" />
+          <Property Name="id" Type="numeric" Precision="10" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="calle" Type="varchar" MaxLength="50" />
+          <Property Name="numero" Type="numeric" Precision="5" Scale="0" />
+          <Property Name="depto" Type="varchar" MaxLength="2" />
+          <Property Name="piso" Type="varchar" MaxLength="2" />
+          <Property Name="manzana" Type="varchar" MaxLength="2" />
+          <Property Name="lote" Type="varchar" MaxLength="2" />
+          <Property Name="cod_localidad" Type="numeric" Precision="10" Scale="0" />
         </EntityType>
         <EntityType Name="tam_productos">
           <Key>
@@ -137,6 +178,57 @@
           <Property Name="valor" Type="varchar" MaxLength="100" />
           <Property Name="id" Type="numeric" Precision="10" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
         </EntityType>
+        <EntityType Name="tar_pedidos_detall">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id_pedido" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="tipo" Type="char" MaxLength="1" />
+          <Property Name="cantidad" Type="numeric" Precision="5" Scale="0" />
+          <Property Name="precio" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="total" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="estado" Type="char" MaxLength="1" />
+          <Property Name="fecha_creacion" Type="datetime" />
+          <Property Name="fecha_estado" Type="datetime" />
+          <Property Name="id" Type="numeric" Precision="10" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_producto" Type="numeric" Precision="10" Scale="0" />
+        </EntityType>
+        <Association Name="FK_clientes_documento">
+          <End Role="tap_tablas" Type="Self.tap_tablas" Multiplicity="0..1" />
+          <End Role="tam_clientes" Type="Self.tam_clientes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tap_tablas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tam_clientes">
+              <PropertyRef Name="cod_tipo_doc" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tam_clientes_tam_empresas">
+          <End Role="tam_empresas" Type="Self.tam_empresas" Multiplicity="0..1" />
+          <End Role="tam_clientes" Type="Self.tam_clientes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tam_empresas">
+              <PropertyRef Name="cod_empresa" />
+            </Principal>
+            <Dependent Role="tam_clientes">
+              <PropertyRef Name="cod_empresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tam_clientes_tam_localidades">
+          <End Role="tam_localidades" Type="Self.tam_localidades" Multiplicity="0..1" />
+          <End Role="tam_clientes" Type="Self.tam_clientes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tam_localidades">
+              <PropertyRef Name="cod_localidad" />
+            </Principal>
+            <Dependent Role="tam_clientes">
+              <PropertyRef Name="cod_localidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_tam_localidades_tam_provincias">
           <End Role="tam_provincias" Type="Self.tam_provincias" Multiplicity="0..1" />
           <End Role="tam_localidades" Type="Self.tam_localidades" Multiplicity="*" />
@@ -146,6 +238,42 @@
             </Principal>
             <Dependent Role="tam_localidades">
               <PropertyRef Name="cod_provincia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tam_pedidos_tam_clientes">
+          <End Role="tam_clientes" Type="Self.tam_clientes" Multiplicity="0..1" />
+          <End Role="tam_pedidos" Type="Self.tam_pedidos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tam_clientes">
+              <PropertyRef Name="id_cliente" />
+            </Principal>
+            <Dependent Role="tam_pedidos">
+              <PropertyRef Name="id_cliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tam_pedidos_tam_empresas">
+          <End Role="tam_empresas" Type="Self.tam_empresas" Multiplicity="1" />
+          <End Role="tam_pedidos" Type="Self.tam_pedidos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tam_empresas">
+              <PropertyRef Name="cod_empresa" />
+            </Principal>
+            <Dependent Role="tam_pedidos">
+              <PropertyRef Name="cod_empresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tam_pedidos_tam_localidades">
+          <End Role="tam_localidades" Type="Self.tam_localidades" Multiplicity="0..1" />
+          <End Role="tam_pedidos" Type="Self.tam_pedidos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tam_localidades">
+              <PropertyRef Name="cod_localidad" />
+            </Principal>
+            <Dependent Role="tam_pedidos">
+              <PropertyRef Name="cod_localidad" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -305,10 +433,36 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_tar_pedidos_detall_tam_pedidos1">
+          <End Role="tam_pedidos" Type="Self.tam_pedidos" Multiplicity="1" />
+          <End Role="tar_pedidos_detall" Type="Self.tar_pedidos_detall" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tam_pedidos">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tar_pedidos_detall">
+              <PropertyRef Name="id_pedido" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tar_pedidos_detall_tam_productos1">
+          <End Role="tam_productos" Type="Self.tam_productos" Multiplicity="0..1" />
+          <End Role="tar_pedidos_detall" Type="Self.tar_pedidos_detall" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tam_productos">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tar_pedidos_detall">
+              <PropertyRef Name="id_producto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="db_pedidosModelStoreContainer">
+          <EntitySet Name="tam_clientes" EntityType="Self.tam_clientes" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tam_empresas" EntityType="Self.tam_empresas" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tam_localidades" EntityType="Self.tam_localidades" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tam_marcas" EntityType="Self.tam_marcas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tam_pedidos" EntityType="Self.tam_pedidos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tam_productos" EntityType="Self.tam_productos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tam_provincias" EntityType="Self.tam_provincias" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tam_subrubros" EntityType="Self.tam_subrubros" Schema="dbo" store:Type="Tables" />
@@ -318,9 +472,34 @@
           <EntitySet Name="tap_parametros" EntityType="Self.tap_parametros" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tap_productos_imagen" EntityType="Self.tap_productos_imagen" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tap_tablas" EntityType="Self.tap_tablas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tar_pedidos_detall" EntityType="Self.tar_pedidos_detall" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_clientes_documento" Association="Self.FK_clientes_documento">
+            <End Role="tap_tablas" EntitySet="tap_tablas" />
+            <End Role="tam_clientes" EntitySet="tam_clientes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tam_clientes_tam_empresas" Association="Self.FK_tam_clientes_tam_empresas">
+            <End Role="tam_empresas" EntitySet="tam_empresas" />
+            <End Role="tam_clientes" EntitySet="tam_clientes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tam_clientes_tam_localidades" Association="Self.FK_tam_clientes_tam_localidades">
+            <End Role="tam_localidades" EntitySet="tam_localidades" />
+            <End Role="tam_clientes" EntitySet="tam_clientes" />
+          </AssociationSet>
           <AssociationSet Name="FK_tam_localidades_tam_provincias" Association="Self.FK_tam_localidades_tam_provincias">
             <End Role="tam_provincias" EntitySet="tam_provincias" />
             <End Role="tam_localidades" EntitySet="tam_localidades" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tam_pedidos_tam_clientes" Association="Self.FK_tam_pedidos_tam_clientes">
+            <End Role="tam_clientes" EntitySet="tam_clientes" />
+            <End Role="tam_pedidos" EntitySet="tam_pedidos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tam_pedidos_tam_empresas" Association="Self.FK_tam_pedidos_tam_empresas">
+            <End Role="tam_empresas" EntitySet="tam_empresas" />
+            <End Role="tam_pedidos" EntitySet="tam_pedidos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tam_pedidos_tam_localidades" Association="Self.FK_tam_pedidos_tam_localidades">
+            <End Role="tam_localidades" EntitySet="tam_localidades" />
+            <End Role="tam_pedidos" EntitySet="tam_pedidos" />
           </AssociationSet>
           <AssociationSet Name="FK_tam_productos_tam_empresas" Association="Self.FK_tam_productos_tam_empresas">
             <End Role="tam_empresas" EntitySet="tam_empresas" />
@@ -373,6 +552,14 @@
           <AssociationSet Name="FK_tap_productos_imagen_tam_productos1" Association="Self.FK_tap_productos_imagen_tam_productos1">
             <End Role="tam_productos" EntitySet="tam_productos" />
             <End Role="tap_productos_imagen" EntitySet="tap_productos_imagen" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tar_pedidos_detall_tam_pedidos1" Association="Self.FK_tar_pedidos_detall_tam_pedidos1">
+            <End Role="tam_pedidos" EntitySet="tam_pedidos" />
+            <End Role="tar_pedidos_detall" EntitySet="tar_pedidos_detall" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tar_pedidos_detall_tam_productos1" Association="Self.FK_tar_pedidos_detall_tam_productos1">
+            <End Role="tam_productos" EntitySet="tam_productos" />
+            <End Role="tar_pedidos_detall" EntitySet="tar_pedidos_detall" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -444,6 +631,41 @@
             <End Role="tam_marcas" EntitySet="tam_marcas" />
             <End Role="tam_productos" EntitySet="tam_productos" />
           </AssociationSet>
+          <EntitySet Name="tam_clientes" EntityType="db_pedidosModel.tam_clientes" />
+          <EntitySet Name="tam_pedidos" EntityType="db_pedidosModel.tam_pedidos" />
+          <EntitySet Name="tar_pedidos_detall" EntityType="db_pedidosModel.tar_pedidos_detall" />
+          <AssociationSet Name="FK_clientes_documento" Association="db_pedidosModel.FK_clientes_documento">
+            <End Role="tap_tablas" EntitySet="tap_tablas" />
+            <End Role="tam_clientes" EntitySet="tam_clientes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tam_clientes_tam_empresas" Association="db_pedidosModel.FK_tam_clientes_tam_empresas">
+            <End Role="tam_empresas" EntitySet="tam_empresas" />
+            <End Role="tam_clientes" EntitySet="tam_clientes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tam_clientes_tam_localidades" Association="db_pedidosModel.FK_tam_clientes_tam_localidades">
+            <End Role="tam_localidades" EntitySet="tam_localidades" />
+            <End Role="tam_clientes" EntitySet="tam_clientes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tam_pedidos_tam_clientes" Association="db_pedidosModel.FK_tam_pedidos_tam_clientes">
+            <End Role="tam_clientes" EntitySet="tam_clientes" />
+            <End Role="tam_pedidos" EntitySet="tam_pedidos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tam_pedidos_tam_empresas" Association="db_pedidosModel.FK_tam_pedidos_tam_empresas">
+            <End Role="tam_empresas" EntitySet="tam_empresas" />
+            <End Role="tam_pedidos" EntitySet="tam_pedidos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tam_pedidos_tam_localidades" Association="db_pedidosModel.FK_tam_pedidos_tam_localidades">
+            <End Role="tam_localidades" EntitySet="tam_localidades" />
+            <End Role="tam_pedidos" EntitySet="tam_pedidos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tar_pedidos_detall_tam_pedidos1" Association="db_pedidosModel.FK_tar_pedidos_detall_tam_pedidos1">
+            <End Role="tam_pedidos" EntitySet="tam_pedidos" />
+            <End Role="tar_pedidos_detall" EntitySet="tar_pedidos_detall" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tar_pedidos_detall_tam_productos1" Association="db_pedidosModel.FK_tar_pedidos_detall_tam_productos1">
+            <End Role="tam_productos" EntitySet="tam_productos" />
+            <End Role="tar_pedidos_detall" EntitySet="tar_pedidos_detall" />
+          </AssociationSet>
           </EntityContainer>
         <EntityType Name="tam_empresas">
           <Key>
@@ -460,6 +682,8 @@
           <NavigationProperty Name="tam_sucursales" Relationship="db_pedidosModel.FK_tam_sucursales_tam_empresas" FromRole="tam_empresas" ToRole="tam_sucursales" />
           <NavigationProperty Name="tam_productos" Relationship="db_pedidosModel.FK_tam_productos_tam_empresas" FromRole="tam_empresas" ToRole="tam_productos" />
           <NavigationProperty Name="tamp_rubros" Relationship="db_pedidosModel.FK_tamp_rubros_tam_empresas" FromRole="tam_empresas" ToRole="tamp_rubros" />
+          <NavigationProperty Name="tam_clientes" Relationship="db_pedidosModel.FK_tam_clientes_tam_empresas" FromRole="tam_empresas" ToRole="tam_clientes" />
+          <NavigationProperty Name="tam_pedidos" Relationship="db_pedidosModel.FK_tam_pedidos_tam_empresas" FromRole="tam_empresas" ToRole="tam_pedidos" />
           </EntityType>
         <EntityType Name="tap_empresas">
           <Key>
@@ -493,6 +717,8 @@
           <Property Name="descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="tam_provincias" Relationship="db_pedidosModel.FK_tam_localidades_tam_provincias" FromRole="tam_localidades" ToRole="tam_provincias" />
           <NavigationProperty Name="tam_sucursales" Relationship="db_pedidosModel.FK_tam_sucursales_tam_localidades" FromRole="tam_localidades" ToRole="tam_sucursales" />
+          <NavigationProperty Name="tam_clientes" Relationship="db_pedidosModel.FK_tam_clientes_tam_localidades" FromRole="tam_localidades" ToRole="tam_clientes" />
+          <NavigationProperty Name="tam_pedidos" Relationship="db_pedidosModel.FK_tam_pedidos_tam_localidades" FromRole="tam_localidades" ToRole="tam_pedidos" />
         </EntityType>
         <EntityType Name="tam_provincias">
           <Key>
@@ -588,6 +814,7 @@
           <NavigationProperty Name="tap_tablas1" Relationship="db_pedidosModel.FK_tam_productos_tap_tablas1" FromRole="tam_productos" ToRole="tap_tablas" />
           <NavigationProperty Name="tap_productos_imagen" Relationship="db_pedidosModel.FK_tap_productos_imagen_tam_productos1" FromRole="tam_productos" ToRole="tap_productos_imagen" />
           <NavigationProperty Name="tam_marcas" Relationship="db_pedidosModel.FK_tam_productos_tam_marcas1" FromRole="tam_productos" ToRole="tam_marcas" />
+          <NavigationProperty Name="tar_pedidos_detall" Relationship="db_pedidosModel.FK_tar_pedidos_detall_tam_productos1" FromRole="tam_productos" ToRole="tar_pedidos_detall" />
         </EntityType>
         <EntityType Name="tam_subrubros">
           <Key>
@@ -641,6 +868,7 @@
           <Property Name="id" Type="Decimal" Nullable="false" Precision="10" Scale="0" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="tam_productos" Relationship="db_pedidosModel.FK_tam_productos_tap_tablas" FromRole="tap_tablas" ToRole="tam_productos" />
           <NavigationProperty Name="tam_productos1" Relationship="db_pedidosModel.FK_tam_productos_tap_tablas1" FromRole="tap_tablas" ToRole="tam_productos" />
+          <NavigationProperty Name="tam_clientes" Relationship="db_pedidosModel.FK_clientes_documento" FromRole="tap_tablas" ToRole="tam_clientes" />
         </EntityType>
         <Association Name="FK_tam_productos_tam_empresas">
           <End Type="db_pedidosModel.tam_empresas" Role="tam_empresas" Multiplicity="1" />
@@ -756,6 +984,168 @@
             </Principal>
             <Dependent Role="tam_productos">
               <PropertyRef Name="cod_marca" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="tam_clientes">
+          <Key>
+            <PropertyRef Name="id_cliente" />
+          </Key>
+          <Property Name="cod_empresa" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="id_cliente" Type="Decimal" Nullable="false" Precision="10" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cod_tipo_doc" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="apellido" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="telefono" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="caracteristica" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="estado" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="fecha_creacion" Type="DateTime" Precision="3" />
+          <Property Name="calle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="numero" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="depto" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="piso" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="manzana" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="lote" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="cod_localidad" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="NOMBRE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="nro_documento" Type="Decimal" Precision="15" Scale="0" />
+          <NavigationProperty Name="tap_tablas" Relationship="db_pedidosModel.FK_clientes_documento" FromRole="tam_clientes" ToRole="tap_tablas" />
+          <NavigationProperty Name="tam_empresas" Relationship="db_pedidosModel.FK_tam_clientes_tam_empresas" FromRole="tam_clientes" ToRole="tam_empresas" />
+          <NavigationProperty Name="tam_localidades" Relationship="db_pedidosModel.FK_tam_clientes_tam_localidades" FromRole="tam_clientes" ToRole="tam_localidades" />
+          <NavigationProperty Name="tam_pedidos" Relationship="db_pedidosModel.FK_tam_pedidos_tam_clientes" FromRole="tam_clientes" ToRole="tam_pedidos" />
+        </EntityType>
+        <EntityType Name="tam_pedidos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="cod_empresa" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
+          <Property Name="id_cliente" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="fecha_creacion" Type="DateTime" Precision="3" />
+          <Property Name="estado" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="fecha_finalizado" Type="DateTime" Precision="3" />
+          <Property Name="id" Type="Decimal" Nullable="false" Precision="10" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="calle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="numero" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="depto" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="piso" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="manzana" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="lote" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="cod_localidad" Type="Decimal" Precision="10" Scale="0" />
+          <NavigationProperty Name="tam_clientes" Relationship="db_pedidosModel.FK_tam_pedidos_tam_clientes" FromRole="tam_pedidos" ToRole="tam_clientes" />
+          <NavigationProperty Name="tam_empresas" Relationship="db_pedidosModel.FK_tam_pedidos_tam_empresas" FromRole="tam_pedidos" ToRole="tam_empresas" />
+          <NavigationProperty Name="tam_localidades" Relationship="db_pedidosModel.FK_tam_pedidos_tam_localidades" FromRole="tam_pedidos" ToRole="tam_localidades" />
+          <NavigationProperty Name="tar_pedidos_detall" Relationship="db_pedidosModel.FK_tar_pedidos_detall_tam_pedidos1" FromRole="tam_pedidos" ToRole="tar_pedidos_detall" />
+        </EntityType>
+        <EntityType Name="tar_pedidos_detall">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id_pedido" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
+          <Property Name="tipo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="cantidad" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="precio" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="total" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="estado" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="fecha_creacion" Type="DateTime" Precision="3" />
+          <Property Name="fecha_estado" Type="DateTime" Precision="3" />
+          <Property Name="id" Type="Decimal" Nullable="false" Precision="10" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_producto" Type="Decimal" Precision="10" Scale="0" />
+          <NavigationProperty Name="tam_pedidos" Relationship="db_pedidosModel.FK_tar_pedidos_detall_tam_pedidos1" FromRole="tar_pedidos_detall" ToRole="tam_pedidos" />
+          <NavigationProperty Name="tam_productos" Relationship="db_pedidosModel.FK_tar_pedidos_detall_tam_productos1" FromRole="tar_pedidos_detall" ToRole="tam_productos" />
+        </EntityType>
+        <Association Name="FK_clientes_documento">
+          <End Type="db_pedidosModel.tap_tablas" Role="tap_tablas" Multiplicity="0..1" />
+          <End Type="db_pedidosModel.tam_clientes" Role="tam_clientes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tap_tablas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tam_clientes">
+              <PropertyRef Name="cod_tipo_doc" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tam_clientes_tam_empresas">
+          <End Type="db_pedidosModel.tam_empresas" Role="tam_empresas" Multiplicity="0..1" />
+          <End Type="db_pedidosModel.tam_clientes" Role="tam_clientes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tam_empresas">
+              <PropertyRef Name="cod_empresa" />
+            </Principal>
+            <Dependent Role="tam_clientes">
+              <PropertyRef Name="cod_empresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tam_clientes_tam_localidades">
+          <End Type="db_pedidosModel.tam_localidades" Role="tam_localidades" Multiplicity="0..1" />
+          <End Type="db_pedidosModel.tam_clientes" Role="tam_clientes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tam_localidades">
+              <PropertyRef Name="cod_localidad" />
+            </Principal>
+            <Dependent Role="tam_clientes">
+              <PropertyRef Name="cod_localidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tam_pedidos_tam_clientes">
+          <End Type="db_pedidosModel.tam_clientes" Role="tam_clientes" Multiplicity="0..1" />
+          <End Type="db_pedidosModel.tam_pedidos" Role="tam_pedidos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tam_clientes">
+              <PropertyRef Name="id_cliente" />
+            </Principal>
+            <Dependent Role="tam_pedidos">
+              <PropertyRef Name="id_cliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tam_pedidos_tam_empresas">
+          <End Type="db_pedidosModel.tam_empresas" Role="tam_empresas" Multiplicity="1" />
+          <End Type="db_pedidosModel.tam_pedidos" Role="tam_pedidos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tam_empresas">
+              <PropertyRef Name="cod_empresa" />
+            </Principal>
+            <Dependent Role="tam_pedidos">
+              <PropertyRef Name="cod_empresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tam_pedidos_tam_localidades">
+          <End Type="db_pedidosModel.tam_localidades" Role="tam_localidades" Multiplicity="0..1" />
+          <End Type="db_pedidosModel.tam_pedidos" Role="tam_pedidos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tam_localidades">
+              <PropertyRef Name="cod_localidad" />
+            </Principal>
+            <Dependent Role="tam_pedidos">
+              <PropertyRef Name="cod_localidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tar_pedidos_detall_tam_pedidos1">
+          <End Type="db_pedidosModel.tam_pedidos" Role="tam_pedidos" Multiplicity="1" />
+          <End Type="db_pedidosModel.tar_pedidos_detall" Role="tar_pedidos_detall" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tam_pedidos">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tar_pedidos_detall">
+              <PropertyRef Name="id_pedido" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tar_pedidos_detall_tam_productos1">
+          <End Type="db_pedidosModel.tam_productos" Role="tam_productos" Multiplicity="0..1" />
+          <End Type="db_pedidosModel.tar_pedidos_detall" Role="tar_pedidos_detall" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tam_productos">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tar_pedidos_detall">
+              <PropertyRef Name="id_producto" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -906,6 +1296,65 @@
                 <ScalarProperty Name="descripcion" ColumnName="descripcion" />
                 <ScalarProperty Name="cod_marca" ColumnName="cod_marca" />
                 <ScalarProperty Name="cod_empresa" ColumnName="cod_empresa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tam_clientes">
+            <EntityTypeMapping TypeName="db_pedidosModel.tam_clientes">
+              <MappingFragment StoreEntitySet="tam_clientes">
+                <ScalarProperty Name="nro_documento" ColumnName="nro_documento" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="cod_localidad" ColumnName="cod_localidad" />
+                <ScalarProperty Name="lote" ColumnName="lote" />
+                <ScalarProperty Name="manzana" ColumnName="manzana" />
+                <ScalarProperty Name="piso" ColumnName="piso" />
+                <ScalarProperty Name="depto" ColumnName="depto" />
+                <ScalarProperty Name="numero" ColumnName="numero" />
+                <ScalarProperty Name="calle" ColumnName="calle" />
+                <ScalarProperty Name="fecha_creacion" ColumnName="fecha_creacion" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="caracteristica" ColumnName="caracteristica" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="apellido" ColumnName="apellido" />
+                <ScalarProperty Name="cod_tipo_doc" ColumnName="cod_tipo_doc" />
+                <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+                <ScalarProperty Name="cod_empresa" ColumnName="cod_empresa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tam_pedidos">
+            <EntityTypeMapping TypeName="db_pedidosModel.tam_pedidos">
+              <MappingFragment StoreEntitySet="tam_pedidos">
+                <ScalarProperty Name="cod_localidad" ColumnName="cod_localidad" />
+                <ScalarProperty Name="lote" ColumnName="lote" />
+                <ScalarProperty Name="manzana" ColumnName="manzana" />
+                <ScalarProperty Name="piso" ColumnName="piso" />
+                <ScalarProperty Name="depto" ColumnName="depto" />
+                <ScalarProperty Name="numero" ColumnName="numero" />
+                <ScalarProperty Name="calle" ColumnName="calle" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="fecha_finalizado" ColumnName="fecha_finalizado" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="fecha_creacion" ColumnName="fecha_creacion" />
+                <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+                <ScalarProperty Name="cod_empresa" ColumnName="cod_empresa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tar_pedidos_detall">
+            <EntityTypeMapping TypeName="db_pedidosModel.tar_pedidos_detall">
+              <MappingFragment StoreEntitySet="tar_pedidos_detall">
+                <ScalarProperty Name="id_producto" ColumnName="id_producto" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="fecha_estado" ColumnName="fecha_estado" />
+                <ScalarProperty Name="fecha_creacion" ColumnName="fecha_creacion" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="total" ColumnName="total" />
+                <ScalarProperty Name="precio" ColumnName="precio" />
+                <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+                <ScalarProperty Name="tipo" ColumnName="tipo" />
+                <ScalarProperty Name="id_pedido" ColumnName="id_pedido" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
