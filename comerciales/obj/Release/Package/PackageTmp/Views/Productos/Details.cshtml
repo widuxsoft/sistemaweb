@@ -1,0 +1,173 @@
+﻿@model comerciales.Contexto.tam_productos
+
+@{
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<header id="page-header">
+    <i class="glyphicon glyphicon-list-alt"></i>
+    <h1> Datos Producto</h1>
+</header>
+<div class="panel-heading panel-heading-transparent">
+    <div id="panel-misc-portlet-color-r3" class="panel panel-primary">
+
+        <div class="panel-heading">
+
+            <span class="elipsis">
+                <!-- panel title -->
+                <strong>Detalle Producto</strong>
+            </span>
+
+            <!-- right options -->
+            <ul class="options pull-right list-inline">
+                <li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="" data-placement="bottom"></a></li>
+                <li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+
+            </ul>
+            <!-- /right options -->
+
+        </div>
+
+        <!-- panel content -->
+        <div class="panel-body">
+            <div>
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        Cod. Producto
+                    </dt>
+
+                    <dd>
+                        @Html.EditorFor(model => model.cod_producto, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
+
+                    <dt>
+                        Nombre
+                    </dt>
+
+                    <dd>
+                        @Html.EditorFor(model => model.nombre, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
+
+                    <dt>
+                        Descripción
+                    </dt>
+
+                    <dd>
+                        @Html.EditorFor(model => model.descripcion, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
+
+                    <dt>
+                        Precio Costo
+                    </dt>
+
+                    <dd>
+                        @Html.EditorFor(model => model.precio_costo, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
+
+                    <dt>
+                        Precio Venta
+                    </dt>
+
+                    <dd>
+                        @Html.EditorFor(model => model.precio_venta, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
+
+                    <dt>
+                        Precio Recarga
+                    </dt>
+
+                    <dd>
+                        @Html.EditorFor(model => model.precio_recarga, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
+
+                    <dt>
+                        Margen
+                    </dt>
+
+                    <dd>
+                        @Html.EditorFor(model => model.margen, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
+
+                    <dt>
+                        Estado
+                    </dt>
+
+                    <dd>
+                        @Html.EditorFor(model => model.estado, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
+
+                    <dt>
+                        Marca
+                    </dt>
+
+                    <dd>
+                        @Html.EditorFor(model => model.tam_marcas.descripcion , new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
+
+                    <dt>
+                        Color
+                    </dt>
+
+                    <dd>
+                        @Html.EditorFor(model => model.cod_color, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
+
+                    <dt>
+                        Capacidad
+                    </dt>
+
+                    <dd>
+                        @Html.EditorFor(model => model.capacidad_nominal, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
+
+                    <dt>
+                        Fecha Creación
+                    </dt>
+
+                    <dd>
+                        @Html.EditorFor(model => model.fecha_creacion, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
+
+                    <dt>
+                        Rubro
+                    </dt>
+
+                    <dd>
+                        @Html.EditorFor(model => model.tamp_rubros.descripcion , new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
+
+                    <dt>
+                        Subrubro
+                    </dt>
+
+                    <dd>
+                        @Html.EditorFor(model => model.tam_subrubros.descripcion , new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
+
+                    <dt>
+                        Agente
+                    </dt>
+
+                    <dd>
+                        @Html.EditorFor(model => model.tap_tablas.valor , new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
+
+                    <dt>
+                        Tipo de Fuego
+                    </dt>
+
+                    <dd>
+                        @Html.EditorFor(model => model.tap_tablas1.valor , new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
+
+                </dl>
+            </div>
+            <p>
+                <button type="button" class="btn btn-primary" onclick="location.href= '@Url.Action("edit",new { id=Model.id })'">Editar</button>
+                <button type="button" class="btn btn-info" onclick="location.href= '@Url.Action("index")'">Volver</button> 
+            </p>
+        </div>
+        <!-- /panel content -->
+    </div>
+</div>

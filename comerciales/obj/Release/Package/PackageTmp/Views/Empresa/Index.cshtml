@@ -1,0 +1,64 @@
+﻿@model IEnumerable<comerciales.Contexto.tam_empresas>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.razon_social)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cuit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fecha_creacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fecha_baja)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.razon_social)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cuit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fecha_creacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fecha_baja)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.cod_empresa }) |
+            @Html.ActionLink("Details", "Details", new { id=item.cod_empresa }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.cod_empresa })
+        </td>
+    </tr>
+}
+
+</table>

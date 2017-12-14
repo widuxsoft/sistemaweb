@@ -1,0 +1,147 @@
+﻿@model comerciales.Contexto.tam_sucursales
+
+@{
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<header id="page-header">
+    <i class="glyphicon glyphicon-list-alt"></i>
+    <h1> Detalle Sucursal</h1>
+</header>
+<div class="panel-heading panel-heading-transparent">
+    <div id="panel-misc-portlet-color-r3" class="panel panel-primary">
+
+        <div class="panel-heading">
+
+            <span class="elipsis">
+                <!-- panel title -->
+                <strong>Datos Sucursal</strong>
+            </span>
+
+            <!-- right options -->
+            <ul class="options pull-right list-inline">
+                <li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="" data-placement="bottom"></a></li>
+                <li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="" data-placement="bottom" ><i class="fa fa-expand"></i></a></li>
+               
+            </ul>
+            <!-- /right options -->
+
+        </div>
+
+        <!-- panel content -->
+        <div class="panel-body">
+            <div>
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        Sucursal
+                    </dt>
+
+                    <dd>
+
+                        @Html.EditorFor(model => model.cod_sucursal, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+
+                    </dd>
+
+                    <dt>
+                        Nombre
+                    </dt>
+
+                    <dd>
+                        @Html.EditorFor(model => model.nombre, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
+
+                    <dt>
+                        Calle
+                    </dt>
+
+                    <dd>
+                        @Html.EditorFor(model => model.calle, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
+
+                    <dt>
+                        Numero
+                    </dt>
+
+                    <dd>
+                        @Html.EditorFor(model => model.numero, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
+
+                    <dt>
+                        Depto
+                    </dt>
+
+                    <dd>
+                        @Html.EditorFor(model => model.depto, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
+
+                    <dt>
+                        Piso
+                    </dt>
+
+                    <dd>
+                        @Html.EditorFor(model => model.piso, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
+
+                    <dt>
+                        Telefono
+                    </dt>
+
+                    <dd>
+                        @Html.EditorFor(model => model.telefono, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
+
+                    <dt>
+                        Característica
+                    </dt>
+
+                    <dd>
+                        @Html.EditorFor(model => model.caracteristica, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
+
+                    <dt>
+                        Mail
+                    </dt>
+
+                    <dd>
+                        @Html.EditorFor(model => model.mail, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
+
+                    <dt>
+                        Fecha Creación
+                    </dt>
+
+                    <dd>
+                        @Html.EditorFor(model => model.fecha_creacion, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
+
+                    <dt>
+                        Activo
+                    </dt>
+
+                    <dd>
+                        @Html.EditorFor(model => model.estado, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
+
+                    <dt>
+                        Localidad
+                    </dt>
+
+                    <dd>
+                        @Html.EditorFor(model => model.tam_localidades.descripcion, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
+
+                </dl>
+            </div>
+            <p>
+                <button type="button" class="btn btn-primary" onclick="location.href= '@Url.Action("edit",new { id=Model.id })'">Editar</button>
+                <button type="button" class="btn btn-info" onclick="location.href= '@Url.Action("index")'">Volver</button> 
+            </p>
+
+
+        </div>
+        <!-- /panel content -->
+        </div>
+    
+
+</div>

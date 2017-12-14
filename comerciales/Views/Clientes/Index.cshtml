@@ -1,0 +1,86 @@
+﻿@model IEnumerable<comerciales.Contexto.tam_clientes>
+
+@{
+    ViewBag.Title = "Clientes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<header id="page-header">
+    <i class="glyphicon glyphicon-phone-alt"></i>
+    <h1>  Datos de Clientes</h1>
+</header>
+<div class="panel-heading panel-heading-transparent">
+    <p>
+        <button type="button" class="btn btn-success" onclick="location.href= '@Url.Action("create")'">Agregar Cliente</button>
+    </p>
+
+    <div id="panel-misc-portlet-color-r3" class="panel panel-primary">
+
+        <div class="panel-heading">
+
+            <span class="elipsis">
+                <!-- panel title -->
+                <strong>Listado de Clientes</strong>
+            </span>
+
+            <!-- right options -->
+            <ul class="options pull-right list-inline">
+                <li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="" data-placement="bottom"></a></li>
+                <li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="" data-placement="bottom"><i class="fa fa-expand"></i></a></li>                
+            </ul>
+            <!-- /right options -->
+
+        </div>
+
+        <!-- panel content -->
+        <div class="panel-body">         
+            <table class="table table-striped table-hover table-bordered" id="sample_editable_1">
+                <tr>
+                <tr>
+                    <th class="text-center">Tipo Documento</th>
+                    <th class="text-center">Nro. Documento</th>
+                    <th class="text-center">Apellido</th>
+                    <th class="text-center">Nombre</th>                    
+                    <th class="text-center">Estado</th>
+                    <th class="text-center">Característica</th>
+                    <th class="text-center">Telefono</th>           
+                    <th class="text-center">Acción</th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.tap_tablas.valor)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.nro_documento)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.apellido )
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NOMBRE )
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.estado )
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.caracteristica )
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.telefono )
+                        </td>                        
+                        <td class="text-center">
+                            <button type="button" class="btn btn-info btn-xs" onclick="location.href= '@Url.Action("edit",new { id=item.id_cliente })'">Editar</button>
+                            <button type="button" class="btn btn-warning btn-xs" onclick="location.href= '@Url.Action("details",new { id=item.id_cliente })'">Detalles</button>
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+        <!-- /panel content -->
+
+    </div>
+    
+</div>
