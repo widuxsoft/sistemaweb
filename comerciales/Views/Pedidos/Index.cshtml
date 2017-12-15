@@ -1,0 +1,100 @@
+﻿@model IEnumerable<comerciales.Contexto.tam_pedidos>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.fecha_creacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fecha_finalizado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.calle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.numero)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.depto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.piso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.manzana)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lote)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tam_clientes.apellido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tam_empresas.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tam_localidades.descripcion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.fecha_creacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fecha_finalizado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.calle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.numero)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.depto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.piso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.manzana)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lote)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tam_clientes.apellido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tam_empresas.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tam_localidades.descripcion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

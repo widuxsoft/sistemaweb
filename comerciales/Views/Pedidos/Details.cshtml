@@ -1,0 +1,115 @@
+﻿@model comerciales.Contexto.tam_pedidos
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tam_pedidos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha_creacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha_creacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha_finalizado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha_finalizado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.calle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.calle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.depto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.depto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.piso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.piso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.manzana)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.manzana)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lote)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lote)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tam_clientes.apellido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tam_clientes.apellido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tam_empresas.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tam_empresas.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tam_localidades.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tam_localidades.descripcion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
