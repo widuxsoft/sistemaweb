@@ -76,7 +76,7 @@ namespace comerciales.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.cod_tipo_doc = new SelectList(db.tap_tablas.Where(j => j.cod_tabla.Equals(3)), "id", "valor");
+            ViewBag.cod_tipo_doc = new SelectList(db.tap_tablas.Where(j => j.cod_tabla.Equals(3)), "id", "valor",tam_clientes.cod_tipo_doc);
             ViewBag.cod_empresa = new SelectList(db.tam_empresas, "cod_empresa", "nombre", tam_clientes.cod_empresa);
             ViewBag.cod_localidad = new SelectList(db.tam_localidades, "cod_localidad", "descripcion", tam_clientes.cod_localidad);
             return View(tam_clientes);

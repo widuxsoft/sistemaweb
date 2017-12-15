@@ -87,8 +87,8 @@ namespace comerciales.Controllers
             ViewBag.cod_empresa = new SelectList(db.tam_empresas, "cod_empresa", "nombre", tam_productos.cod_empresa);
             ViewBag.cod_subrubro = new SelectList(db.tam_subrubros, "cod_subrubro", "descripcion", tam_productos.cod_subrubro);
             ViewBag.cod_rubro = new SelectList(db.tamp_rubros, "cod_rubro", "descripcion", tam_productos.cod_rubro);
-            ViewBag.id_agente = new SelectList(db.tap_tablas.Where(j => j.cod_tabla.Equals(1)), "id", "valor");
-            ViewBag.id_tipo_fuego = new SelectList(db.tap_tablas.Where(j => j.cod_tabla.Equals(2)), "id", "valor");
+            ViewBag.id_agente = new SelectList(db.tap_tablas.Where(j => j.cod_tabla.Equals(1)), "id", "valor",tam_productos.id_agente);
+            ViewBag.id_tipo_fuego = new SelectList(db.tap_tablas.Where(j => j.cod_tabla.Equals(2)), "id", "valor",tam_productos.id_tipo_fuego);
 
             return View(tam_productos);
         }
