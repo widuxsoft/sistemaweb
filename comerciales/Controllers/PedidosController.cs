@@ -7,12 +7,32 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using comerciales.Contexto;
+using System.Text;
 
 namespace comerciales.Controllers
 {
+    public class C_Tipo
+    {
+        public String Id { get; set; }
+        public string Name { get; set; }
+    }
     public class PedidosController : Controller
     {
         private db_pedidosEntities db = new db_pedidosEntities();
+
+        public List<C_Tipo> tipos = new List<C_Tipo>() {
+        new C_Tipo(){ Id = "C", Name = "Nuevo" },
+        new C_Tipo(){ Id = "R", Name = "Recarga" }
+        };
+
+        public IEnumerable<SelectListItem> TiposItems
+        {
+            get { return new SelectList(tipos, "Id", "Name"); }
+        }
+
+        StringBuilder sb = new StringBuilder();
+
+
 
         // GET: Pedidos
         public ActionResult Index()
@@ -42,6 +62,7 @@ namespace comerciales.Controllers
             ViewBag.id_cliente = new SelectList(db.tam_clientes, "id_cliente", "apellido");
             ViewBag.cod_empresa = new SelectList(db.tam_empresas, "cod_empresa", "nombre");
             ViewBag.cod_localidad = new SelectList(db.tam_localidades, "cod_localidad", "descripcion");
+          
             return View();
         }
 
@@ -77,9 +98,11 @@ namespace comerciales.Controllers
             {
                 return HttpNotFound();
             }
+            
             ViewBag.id_cliente = new SelectList(db.tam_clientes, "id_cliente", "apellido", tam_pedidos.id_cliente);
             ViewBag.cod_empresa = new SelectList(db.tam_empresas, "cod_empresa", "nombre", tam_pedidos.cod_empresa);
             ViewBag.cod_localidad = new SelectList(db.tam_localidades, "cod_localidad", "descripcion", tam_pedidos.cod_localidad);
+            ViewBag.tipos = tipos;
             return View(tam_pedidos);
         }
 
