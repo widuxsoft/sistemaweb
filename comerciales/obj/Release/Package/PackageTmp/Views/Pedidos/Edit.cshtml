@@ -1,0 +1,242 @@
+﻿@model comerciales.Contexto.tam_pedidos
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <header id="page-header">
+        <i class="glyphicon glyphicon-pencil"></i>
+        <h1> Editar Pedido</h1>
+    </header>
+
+    <div class="panel-heading panel-heading-transparent">
+        <div id="panel-misc-portlet-color-r3" class="panel panel-primary">
+
+            <div class="panel-heading">
+
+                <span class="elipsis">
+                    <!-- panel title -->
+                    <strong>Datos Pedido</strong>
+                </span>
+
+                <!-- right options -->
+                <ul class="options pull-right list-inline">
+                    <li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="" data-placement="bottom"></a></li>
+                    <li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+                </ul>
+                <!-- /right options -->
+
+            </div>
+
+            <!-- panel content -->
+            <div class="panel-body">
+
+
+                <div class="form-horizontal">
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        <label class="control-label col-md-2" for="cuit">Pedido</label>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.id, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.id, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2" for="cuit">Estado</label>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.estado, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.estado, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2" for="cuit">Finalizado</label>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.fecha_finalizado, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.fecha_finalizado, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-2" for="cuit">Característica</label>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.tam_clientes.caracteristica , new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                            @Html.ValidationMessageFor(model => model.tam_clientes.caracteristica , "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-2" for="cuit">Telefono</label>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.tam_clientes.telefono , new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                            @Html.ValidationMessageFor(model => model.tam_clientes.telefono, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2" for="cuit">Calle</label>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.calle, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.calle, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2" for="cuit">Numero</label>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.numero, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.numero, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    @Html.HiddenFor(model => model.id)
+                    @Html.HiddenFor(model => model.cod_empresa )
+                    @Html.HiddenFor(model => model.id_cliente)
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2" for="cuit">Depto</label>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.depto, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.depto, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2" for="cuit">Piso</label>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.piso, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.piso, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2" for="cuit">Manzana</label>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.manzana, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.manzana, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2" for="cuit">Lote</label>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.lote, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.lote, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2" for="cuit">Localidad</label>
+                        <div class="col-md-10">
+                            @Html.DropDownList("cod_localidad", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.cod_localidad, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+
+                            <input type="submit" value="Guardar" class="btn btn-primary" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /panel content -->
+        </div>
+        <div class="form-group">
+            <button type="button" class="btn btn-success" onclick="location.href= '@Url.Action("create","PedidosDetalle",new { id_pedido= Model.id })'">Agregar Item</button>
+        </div>
+        
+
+            <div id="panel-misc-portlet-color-r3" class="panel panel-primary">
+
+                <div class="panel-heading">
+
+                    <span class="elipsis">
+                        <!-- panel title -->
+                        <strong>Listado de Items</strong>
+                    </span>
+
+                    <!-- right options -->
+                    <ul class="options pull-right list-inline">
+                        <li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="" data-placement="bottom"></a></li>
+                        <li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+
+                    </ul>
+                    <!-- /right options -->
+
+                </div>
+
+                <!-- panel content -->
+                <div class="panel-body">
+
+                    <table class="table table-striped table-hover table-bordered" id="sample_editable_1">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Tipo</th>
+                                <th class="text-center">Producto</th>
+                                <th class="text-center">Cantidad</th>
+                                <th class="text-center">Precio</th>
+                                <th class="text-center">Total</th>
+                                <th class="text-center">Estado</th>
+                                <th class="text-center">Acciones</th>
+                            </tr>
+                        </thead>
+
+                        @foreach (var item in Model.tar_pedidos_detall )
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.tipo)
+
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.tam_productos.nombre )
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.cantidad)
+
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.precio)
+
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.total)
+
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.estado)
+
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="btn btn-info btn-xs" onclick="location.href= '@Url.Action("edit","PedidosDetalle",new { id=item.id })'">Editar</button>
+                                    <button type="button" class="btn btn-danger btn-xs" onclick="location.href= '@Url.Action("delete","PedidosDetalle",new { id=item.id })'">Eliminar</button>
+                                    
+                                </td>
+                            </tr>
+                        }
+                    </table>
+
+                    <!-- CSS DATATABLE -->
+                    <link href="assets/css/layout-datatable.css" rel="stylesheet" type="text/css" />
+
+
+
+                </div>
+
+
+            </div>
+            <!-- /panel content -->
+
+
+        
+    </div>
+
+}
+

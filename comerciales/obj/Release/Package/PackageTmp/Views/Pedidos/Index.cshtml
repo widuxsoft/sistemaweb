@@ -1,0 +1,98 @@
+﻿@model IEnumerable<comerciales.Contexto.tam_pedidos>
+
+@{
+    ViewBag.Title = "Pedidos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<header id="page-header">
+    <i class="glyphicon glyphicon-check"></i>
+    <h1>  Datos de Pedidos</h1>
+</header>
+
+<div class="panel-heading panel-heading-transparent">
+    <p>
+        <button type="button" class="btn btn-success" >Agregar Pedido</button>
+    </p>
+    <div id="panel-misc-portlet-color-r3" class="panel panel-primary">
+
+        <div class="panel-heading">
+
+            <span class="elipsis">
+                <!-- panel title -->
+                <strong>Listado de Pedidos</strong>
+            </span>
+
+            <!-- right options -->
+            <ul class="options pull-right list-inline">
+                <li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="" data-placement="bottom"></a></li>
+                <li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+                <li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="Close"><i class="fa fa-times"></i></a></li>
+            </ul>
+            <!-- /right options -->
+
+        </div>
+
+        <!-- panel content -->
+        <div class="panel-body">
+
+            <table class="table table-striped table-hover table-bordered" id="sample_editable_1">
+                <tr>
+                    <th class="text-center">Pedido</th>
+                    <th class="text-center">Nro. Doc.</th>
+                    <th class="text-center">Apellido</th>
+                    <th class="text-center">Nombre</th>
+                    <th class="text-center">Fecha</th>
+                    <th class="text-center">Estado</th>
+                    <th class="text-center">Telefono</th>
+                    <th class="text-center">Email</th>                    
+                   
+                    <th class="text-center">Finalizacion</th>                    
+                    <th class="text-center">Acción</th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.id )
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.tam_clientes.nro_documento )
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.tam_clientes.apellido )
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.tam_clientes.NOMBRE )
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.fecha_creacion )
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.estado )
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.tam_clientes.caracteristica ) - @Html.DisplayFor(modelItem => item.tam_clientes.telefono)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.tam_clientes.email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.fecha_finalizado )
+                        </td>
+                        
+                        <td class="text-center">
+                            <button type="button" class="btn btn-info btn-xs" onclick="location.href= '@Url.Action("edit",new { id=item.id })'">Editar</button>
+                            
+                            <button type="button" class="btn btn-danger btn-xs" onclick="location.href= '@Url.Action("delete",new { id=item.id })'">Eliminar</button>
+                        </td>
+                    </tr>
+                }
+
+            </table>
+
+        </div>
+        <!-- /panel content -->
+
+    </div>
+</div>

@@ -1,0 +1,94 @@
+﻿@model comerciales.Contexto.tam_pedidos
+
+@{
+    ViewBag.Title = "Eliminar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<header id="page-header">
+    <i class="glyphicon glyphicon-trash"></i>
+    <h1> Eliminar Item</h1>
+</header>
+<h3>¿Está seguro que desea eliminar el pedido?</h3>
+<div class="panel-heading panel-heading-transparent">
+    <div id="panel-misc-portlet-color-r3" class="panel panel-primary">
+
+        <div class="panel-heading">
+
+            <span class="elipsis">
+                <!-- panel title -->
+                <strong>Datos Pedido</strong>
+            </span>
+
+            <!-- right options -->
+            <ul class="options pull-right list-inline">
+                <li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="" data-placement="bottom"></a></li>
+                <li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="" data-placement="bottom"><i class="fa fa-expand"></i></a></li>                
+            </ul>
+            <!-- /right options -->
+
+        </div>
+
+        <!-- panel content -->
+        <div class="panel-body">
+
+            <div>
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        Pedido:
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.id)
+                    </dd>
+
+                    <dt>
+                        Documento:
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.tam_clientes.nro_documento)
+                    </dd>
+
+                    <dt>
+                        Apellido:
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.tam_clientes.apellido)
+                    </dd>
+
+                    <dt>
+                        Nombre:
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.tam_clientes.NOMBRE)
+                    </dd>
+
+                    <dt>
+                        Fecha: 
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.fecha_creacion)
+                    </dd>
+
+                    
+
+                </dl>
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <input type="submit" value="SI" class="btn btn-primary" />
+                    <button type="button" class="btn btn-info" onclick="location.href= '@Url.Action("Index")'">NO</button>
+                }
+            </div>
+
+        </div>
+        <!-- /panel content -->
+
+    </div>
+</div>

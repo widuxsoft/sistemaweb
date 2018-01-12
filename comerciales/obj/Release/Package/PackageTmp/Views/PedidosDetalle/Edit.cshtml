@@ -1,0 +1,100 @@
+﻿@model comerciales.Contexto.tar_pedidos_detall
+
+@{    
+    ViewBag.Title = "Editar Item";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <header id="page-header">
+        <i class="glyphicon glyphicon-pencil"></i>
+        <h1> Editar Item</h1>
+    </header>
+
+    <div class="panel-heading panel-heading-transparent">
+        <div id="panel-misc-portlet-color-r3" class="panel panel-primary">
+
+            <div class="panel-heading">
+
+                <span class="elipsis">
+                    <!-- panel title -->
+                    <strong>Datos Item</strong>
+                </span>
+
+                <!-- right options -->
+                <ul class="options pull-right list-inline">
+                    <li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="" data-placement="bottom"></a></li>
+                    <li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="" data-placement="bottom"><i class="fa fa-expand"></i></a></li>                    
+                </ul>
+                <!-- /right options -->
+
+            </div>
+
+            <!-- panel content -->
+            <div class="panel-body">
+
+                <div class="form-horizontal">
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        <div class="control-label col-md-2">Pedido</div>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.id_pedido, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.id_pedido, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="control-label col-md-2">Tipo</div>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.tipo, new { htmlAttributes = new { @class = "form-control" } })                                                                                                
+                            @Html.ValidationMessageFor(model => model.tipo, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="control-label col-md-2">Cantidad</div>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.cantidad, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.cantidad, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="control-label col-md-2">Estado</div>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.estado, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.estado, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+
+                    @Html.HiddenFor(model => model.id)
+
+                    <div class="form-group">
+                        <div class="control-label col-md-2">Producto</div>
+                        <div class="col-md-10">
+                            @Html.DropDownList("id_producto", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.id_producto, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Guardar" class="btn btn-primary" />
+                            <button type="button" class="btn btn-info" onclick="location.href= '@Url.Action("edit","Pedidos",new { id=Model.id_pedido })'">Volver</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /panel content -->
+
+        </div>
+     
+    </div>
+
+        }
+
