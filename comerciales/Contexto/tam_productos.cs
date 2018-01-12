@@ -11,7 +11,8 @@ namespace comerciales.Contexto
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class tam_productos
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,6 +23,7 @@ namespace comerciales.Contexto
         }
     
         public decimal cod_empresa { get; set; }
+        [DisplayFormat(DataFormatString = "{0}", ApplyFormatInEditMode = true)]
         public decimal cod_producto { get; set; }
         public string nombre { get; set; }
         public string descripcion { get; set; }
@@ -38,6 +40,7 @@ namespace comerciales.Contexto
         public Nullable<decimal> id_agente { get; set; }
         public Nullable<decimal> id_tipo_fuego { get; set; }
         public Nullable<System.DateTime> fecha_creacion { get; set; }
+        [DisplayFormat(DataFormatString = "{0}", ApplyFormatInEditMode = true)]
         public decimal id { get; set; }
     
         public virtual tam_empresas tam_empresas { get; set; }

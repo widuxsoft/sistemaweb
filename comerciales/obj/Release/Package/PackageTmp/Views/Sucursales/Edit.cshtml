@@ -137,8 +137,20 @@
                     <div class="form-group">
                         <div class="control-label col-md-2">Estado</div>
                             <div class="col-md-10">
+                                @{  string ischecked;
+                                    if (Model.estado == "0")
+                                    {
+                                        ischecked = "checked";
+                                    }
+                                    else
+                                    {
+                                        ischecked = "";
+                                    }
+                                
+                                <input type="checkbox" name="Name" value="Name" checked="@ischecked" /><br />}
                                 @Html.EditorFor(model => model.estado, new { htmlAttributes = new { @class = "form-control" } })
                                 @Html.ValidationMessageFor(model => model.estado, "", new { @class = "text-danger" })
+
                             </div>
                         </div>
 

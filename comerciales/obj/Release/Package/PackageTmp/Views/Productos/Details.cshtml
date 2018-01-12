@@ -38,7 +38,7 @@
                     </dt>
 
                     <dd>
-                        @Html.EditorFor(model => model.cod_producto, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                        @Html.EditorFor(model => model.id, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
                     </dd>
 
                     <dt>
@@ -58,14 +58,6 @@
                     </dd>
 
                     <dt>
-                        Precio Costo
-                    </dt>
-
-                    <dd>
-                        @Html.EditorFor(model => model.precio_costo, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
-                    </dd>
-
-                    <dt>
                         Precio Venta
                     </dt>
 
@@ -81,37 +73,6 @@
                         @Html.EditorFor(model => model.precio_recarga, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
                     </dd>
 
-                    <dt>
-                        Margen
-                    </dt>
-
-                    <dd>
-                        @Html.EditorFor(model => model.margen, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
-                    </dd>
-
-                    <dt>
-                        Estado
-                    </dt>
-
-                    <dd>
-                        @Html.EditorFor(model => model.estado, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
-                    </dd>
-
-                    <dt>
-                        Marca
-                    </dt>
-
-                    <dd>
-                        @Html.EditorFor(model => model.tam_marcas.descripcion , new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
-                    </dd>
-
-                    <dt>
-                        Color
-                    </dt>
-
-                    <dd>
-                        @Html.EditorFor(model => model.cod_color, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
-                    </dd>
 
                     <dt>
                         Capacidad
@@ -119,30 +80,6 @@
 
                     <dd>
                         @Html.EditorFor(model => model.capacidad_nominal, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
-                    </dd>
-
-                    <dt>
-                        Fecha Creación
-                    </dt>
-
-                    <dd>
-                        @Html.EditorFor(model => model.fecha_creacion, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
-                    </dd>
-
-                    <dt>
-                        Rubro
-                    </dt>
-
-                    <dd>
-                        @Html.EditorFor(model => model.tamp_rubros.descripcion , new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
-                    </dd>
-
-                    <dt>
-                        Subrubro
-                    </dt>
-
-                    <dd>
-                        @Html.EditorFor(model => model.tam_subrubros.descripcion , new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
                     </dd>
 
                     <dt>
@@ -160,6 +97,15 @@
                     <dd>
                         @Html.EditorFor(model => model.tap_tablas1.valor , new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
                     </dd>
+
+                    <dt>
+                        Fecha Creación
+                    </dt>
+
+                    <dd>
+                        @Html.EditorFor(model => model.fecha_creacion, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </dd>
+
 
                 </dl>
             </div>

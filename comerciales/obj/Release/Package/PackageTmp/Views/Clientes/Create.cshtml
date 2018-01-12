@@ -8,44 +8,44 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    <header id="page-header">
-        <i class="glyphicon glyphicon-pencil"></i>
-        <h1> Editar Cliente</h1>
-    </header>
-    <div class="panel-heading panel-heading-transparent">
-        <div id="panel-misc-portlet-color-r3" class="panel panel-primary">
 
-            <div class="panel-heading">
+    <div class="form-horizontal">
+        <header id="page-header">
+            <i class="main-icon fa fa-pencil-square-o"></i>
+            <h1> Agregar Cliente</h1>
+        </header>
 
-                <span class="elipsis">
-                    <!-- panel title -->
-                    <strong>Datos de Cliente</strong>
-                </span>
+        <hr />
+        <div class="panel-heading panel-heading-transparent">
+            <div id="panel-misc-portlet-color-r3" class="panel panel-primary">
 
-                <!-- right options -->
-                <ul class="options pull-right list-inline">
-                    <li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="" data-placement="bottom"></a></li>
-                    <li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
-                </ul>
-                <!-- /right options -->
+                <div class="panel-heading">
 
-            </div>
+                    <span class="elipsis">
+                        <!-- panel title -->
+                        <strong>Datos de Cliente</strong>
+                    </span>
 
-            <!-- panel content -->
-            <div class="panel-body">
-                <div class="form-horizontal">
-                    <hr />
+                    <!-- right options -->
+                    <ul class="options pull-right list-inline">
+                        <li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="" data-placement="bottom"></a></li>
+                        <li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+                    </ul>
+                    <!-- /right options -->
+
+                </div>
+
+                <!-- panel content -->
+                <div class="panel-body">
+
                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                     <div class="form-group">
                         <div class="control-label col-md-2">Empresa</div>
                         <div class="col-md-10">
-                            @Html.DropDownList("cod_empresa", null, htmlAttributes: new { @class = "form-control", @readonly = "readonly" })
+                            @Html.DropDownList("cod_empresa", null, htmlAttributes: new { @class = "form-control" })
                             @Html.ValidationMessageFor(model => model.cod_empresa, "", new { @class = "text-danger" })
                         </div>
                     </div>
-
-                    @Html.HiddenFor(model => model.id_cliente)
-
                     <div class="form-group">
                         <div class="control-label col-md-2">Tipo Doc.</div>
                         <div class="col-md-10">
@@ -85,9 +85,7 @@
                             @Html.ValidationMessageFor(model => model.estado, "", new { @class = "text-danger" })
                         </div>
                     </div>
-
-
-
+                    
                     <div class="form-group">
                         <div class="control-label col-md-2">Calle</div>
                         <div class="col-md-10">
@@ -105,7 +103,7 @@
                     </div>
 
                     <div class="form-group">
-                        <div class="control-label col-md-2">Depto.</div>
+                        <div class="control-label col-md-2">Depto</div>
                         <div class="col-md-10">
                             @Html.EditorFor(model => model.depto, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.depto, "", new { @class = "text-danger" })
@@ -127,7 +125,6 @@
                             @Html.ValidationMessageFor(model => model.manzana, "", new { @class = "text-danger" })
                         </div>
                     </div>
-
                     <div class="form-group">
                         <div class="control-label col-md-2">Lote</div>
                         <div class="col-md-10">
@@ -143,7 +140,7 @@
                             @Html.ValidationMessageFor(model => model.cod_localidad, "", new { @class = "text-danger" })
                         </div>
                     </div>
-
+                   
                     <div class="form-group">
                         <div class="control-label col-md-2">Característica</div>
                         <div class="col-md-10">
@@ -151,6 +148,7 @@
                             @Html.ValidationMessageFor(model => model.caracteristica, "", new { @class = "text-danger" })
                         </div>
                     </div>
+
 
                     <div class="form-group">
                         <div class="control-label col-md-2">Telefono</div>
@@ -167,19 +165,8 @@
                             @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
                         </div>
                     </div>
-
-                    <div class="form-group">
-                        <div class="control-label col-md-2">Fecha Creación</div>
-                        <div class="col-md-10">
-                            @Html.EditorFor(model => model.fecha_creacion, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
-                            @Html.ValidationMessageFor(model => model.fecha_creacion, "", new { @class = "text-danger" })
-                        </div>
-                    </div>
-
-
-
-
-
+              
+                    
 
                     <div class="form-group">
                         <div class="col-md-offset-2 col-md-10">
@@ -187,11 +174,14 @@
                             <button type="button" class="btn btn-info" onclick="location.href= '@Url.Action("index")'">Volver</button>
                         </div>
                     </div>
-                </div>
+
+                </div>                
+                <!-- /panel content -->
+
             </div>
-            <!-- /panel content -->
+        </div>
 
         </div>
-    </div>
 }
+
 

@@ -57,6 +57,10 @@ namespace comerciales.Controllers
         {
             if (ModelState.IsValid)
             {
+                tam_productos.cod_producto = tam_productos.id;
+                tam_productos.cod_empresa = 1;
+                tam_productos.estado = "0";
+                tam_productos.fecha_creacion = DateTime.Now;
                 db.tam_productos.Add(tam_productos);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -65,10 +69,11 @@ namespace comerciales.Controllers
           //  db.tap_tablas1.Where(j => j.cod_tabla.Equals(1));
             ViewBag.cod_empresa = new SelectList(db.tam_empresas, "cod_empresa", "nombre", tam_productos.cod_empresa);
             ViewBag.cod_subrubro = new SelectList(db.tam_subrubros, "cod_subrubro", "descripcion", tam_productos.cod_subrubro);
+            ViewBag.id_agente = new SelectList(db.tap_tablas.Where(j => j.cod_tabla.Equals(1)), "id", "valor", tam_productos.id_agente);
+            ViewBag.id_tipo_fuego = new SelectList(db.tap_tablas.Where(j => j.cod_tabla.Equals(2)), "id", "valor", tam_productos.id_tipo_fuego);
             ViewBag.cod_rubro = new SelectList(db.tamp_rubros, "cod_rubro", "descripcion", tam_productos.cod_rubro);
-            ViewBag.id_agente = new SelectList(db.tap_tablas, "id", "codigo", tam_productos.id_agente);
 
-           // ViewBag.id_tipo_fuego = new SelectList(db.tap_tablas1, "id", "codigo", tam_productos.id_tipo_fuego);
+            // ViewBag.id_tipo_fuego = new SelectList(db.tap_tablas1, "id", "codigo", tam_productos.id_tipo_fuego);
             return View(tam_productos);
         }
 

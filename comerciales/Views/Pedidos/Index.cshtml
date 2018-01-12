@@ -11,7 +11,7 @@
 
 <div class="panel-heading panel-heading-transparent">
     <p>
-        <button type="button" class="btn btn-success" onclick="location.href= '@Url.Action("create")'">Agregar Pedido</button>
+        <button type="button" class="btn btn-success" >Agregar Pedido</button>
     </p>
     <div id="panel-misc-portlet-color-r3" class="panel panel-primary">
 
@@ -25,8 +25,7 @@
             <!-- right options -->
             <ul class="options pull-right list-inline">
                 <li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="" data-placement="bottom"></a></li>
-                <li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
-                <li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="Close"><i class="fa fa-times"></i></a></li>
+                <li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="" data-placement="bottom"><i class="fa fa-expand"></i></a></li>               
             </ul>
             <!-- /right options -->
 
@@ -43,9 +42,9 @@
                     <th class="text-center">Nombre</th>
                     <th class="text-center">Fecha</th>
                     <th class="text-center">Estado</th>
-                    <th class="text-center">Calle</th>
-                    <th class="text-center">Nro.</th>                    
-                    <th class="text-center">Localidad</th>
+                    <th class="text-center">Telefono</th>
+                    <th class="text-center">Email</th>                    
+                   
                     <th class="text-center">Finalizacion</th>                    
                     <th class="text-center">Acción</th>
                 </tr>
@@ -68,17 +67,13 @@
                         <td>
                             @Html.DisplayFor(modelItem => item.fecha_creacion )
                         </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.estado )
+                        <td class="text-center">
+                            @(item.estado == "0" ? "Pendiente" : "Finalizado")
+<td>
+                            @Html.DisplayFor(modelItem => item.tam_clientes.caracteristica ) - @Html.DisplayFor(modelItem => item.tam_clientes.telefono)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.calle )
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.numero )
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.tam_localidades.descripcion )
+                            @Html.DisplayFor(modelItem => item.tam_clientes.email)
                         </td>
                         <td>
                             @Html.DisplayFor(modelItem => item.fecha_finalizado )
@@ -86,7 +81,7 @@
                         
                         <td class="text-center">
                             <button type="button" class="btn btn-info btn-xs" onclick="location.href= '@Url.Action("edit",new { id=item.id })'">Editar</button>
-                            <button type="button" class="btn btn-warning btn-xs" onclick="location.href= '@Url.Action("details",new { id=item.id })'">Detalles</button>
+                            
                             <button type="button" class="btn btn-danger btn-xs" onclick="location.href= '@Url.Action("delete",new { id=item.id })'">Eliminar</button>
                         </td>
                     </tr>

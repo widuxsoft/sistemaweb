@@ -10,6 +10,7 @@ namespace comerciales.Controllers
     {
         public ActionResult Index()
         {
+            
             return View();
         }
 

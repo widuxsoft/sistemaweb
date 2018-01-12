@@ -28,4 +28,6 @@ namespace comerciales.Contexto
         public virtual tam_pedidos tam_pedidos { get; set; }
         public virtual tam_productos tam_productos { get; set; }
     }
+
+
 }

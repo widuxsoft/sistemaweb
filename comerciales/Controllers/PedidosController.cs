@@ -20,24 +20,12 @@ namespace comerciales.Controllers
     {
         private db_pedidosEntities db = new db_pedidosEntities();
 
-        public List<C_Tipo> tipos = new List<C_Tipo>() {
-        new C_Tipo(){ Id = "C", Name = "Nuevo" },
-        new C_Tipo(){ Id = "R", Name = "Recarga" }
-        };
-
-        public IEnumerable<SelectListItem> TiposItems
-        {
-            get { return new SelectList(tipos, "Id", "Name"); }
-        }
-
-        StringBuilder sb = new StringBuilder();
-
-
-
         // GET: Pedidos
         public ActionResult Index()
         {
-            var tam_pedidos = db.tam_pedidos.Include(t => t.tam_clientes).Include(t => t.tam_empresas).Include(t => t.tam_localidades);
+            var tam_pedidos = db.tam_pedidos.Include(t => t.tam_clientes).Include(t => t.tam_empresas).Include(t => t.tam_localidades).OrderByDescending(tb =>tb.id);
+               
+
             return View(tam_pedidos.ToList());
         }
 
@@ -102,7 +90,7 @@ namespace comerciales.Controllers
             ViewBag.id_cliente = new SelectList(db.tam_clientes, "id_cliente", "apellido", tam_pedidos.id_cliente);
             ViewBag.cod_empresa = new SelectList(db.tam_empresas, "cod_empresa", "nombre", tam_pedidos.cod_empresa);
             ViewBag.cod_localidad = new SelectList(db.tam_localidades, "cod_localidad", "descripcion", tam_pedidos.cod_localidad);
-            ViewBag.tipos = tipos;
+
             return View(tam_pedidos);
         }
 
@@ -115,6 +103,10 @@ namespace comerciales.Controllers
         {
             if (ModelState.IsValid)
             {
+                if (tam_pedidos.estado=="1" && tam_pedidos.fecha_finalizado == null)
+                {
+                    tam_pedidos.fecha_finalizado = DateTime.Now;
+                }
                 db.Entry(tam_pedidos).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -146,6 +138,9 @@ namespace comerciales.Controllers
         public ActionResult DeleteConfirmed(decimal id)
         {
             tam_pedidos tam_pedidos = db.tam_pedidos.Find(id);
+            var items = db.tar_pedidos_detall.Where(m => m.id_pedido == id);
+            foreach (tar_pedidos_detall item in items)
+                db.tar_pedidos_detall.Remove(item);
             db.tam_pedidos.Remove(tam_pedidos);
             db.SaveChanges();
             return RedirectToAction("Index");

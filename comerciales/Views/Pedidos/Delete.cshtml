@@ -1,121 +1,94 @@
 ﻿@model comerciales.Contexto.tam_pedidos
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Eliminar";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<header id="page-header">
+    <i class="glyphicon glyphicon-trash"></i>
+    <h1> Eliminar Item</h1>
+</header>
+<h3>¿Está seguro que desea eliminar el pedido?</h3>
+<div class="panel-heading panel-heading-transparent">
+    <div id="panel-misc-portlet-color-r3" class="panel panel-primary">
 
-<h2>Delete</h2>
+        <div class="panel-heading">
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>tam_pedidos</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.fecha_creacion)
-        </dt>
+            <span class="elipsis">
+                <!-- panel title -->
+                <strong>Datos Pedido</strong>
+            </span>
 
-        <dd>
-            @Html.DisplayFor(model => model.fecha_creacion)
-        </dd>
+            <!-- right options -->
+            <ul class="options pull-right list-inline">
+                <li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="" data-placement="bottom"></a></li>
+                <li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="" data-placement="bottom"><i class="fa fa-expand"></i></a></li>                
+            </ul>
+            <!-- /right options -->
 
-        <dt>
-            @Html.DisplayNameFor(model => model.estado)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.estado)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.fecha_finalizado)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.fecha_finalizado)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.calle)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.calle)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.numero)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.numero)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.depto)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.depto)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.piso)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.piso)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.manzana)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.manzana)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.lote)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.lote)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.tam_clientes.apellido)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.tam_clientes.apellido)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.tam_empresas.nombre)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.tam_empresas.nombre)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.tam_localidades.descripcion)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.tam_localidades.descripcion)
-        </dd>
-
-    </dl>
-
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
         </div>
-    }
+
+        <!-- panel content -->
+        <div class="panel-body">
+
+            <div>
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        Pedido:
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.id)
+                    </dd>
+
+                    <dt>
+                        Documento:
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.tam_clientes.nro_documento)
+                    </dd>
+
+                    <dt>
+                        Apellido:
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.tam_clientes.apellido)
+                    </dd>
+
+                    <dt>
+                        Nombre:
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.tam_clientes.NOMBRE)
+                    </dd>
+
+                    <dt>
+                        Fecha: 
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.fecha_creacion)
+                    </dd>
+
+                    
+
+                </dl>
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <input type="submit" value="SI" class="btn btn-primary" />
+                    <button type="button" class="btn btn-info" onclick="location.href= '@Url.Action("Index")'">NO</button>
+                }
+            </div>
+
+        </div>
+        <!-- /panel content -->
+
+    </div>
 </div>

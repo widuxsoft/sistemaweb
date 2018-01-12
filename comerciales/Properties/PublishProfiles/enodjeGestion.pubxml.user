@@ -11,319 +11,319 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
   </PropertyGroup>
   <ItemGroup>
     <File Include="assets/css/color_scheme/green.css">
-      <publishTime>11/07/2017 02:26:04</publishTime>
+      <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/css/essentials.css">
-      <publishTime>11/07/2017 02:26:04</publishTime>
+      <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/css/layout-datatables.css">
-      <publishTime>11/07/2017 02:26:04</publishTime>
+      <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/css/layout-footable-minimal.css">
-      <publishTime>11/07/2017 02:26:04</publishTime>
+      <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/css/layout-jqgrid.css">
-      <publishTime>11/07/2017 02:26:04</publishTime>
+      <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/css/layout-nestable.css">
-      <publishTime>11/07/2017 02:26:04</publishTime>
+      <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/css/layout-RTL.css">
-      <publishTime>11/07/2017 02:26:04</publishTime>
+      <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/css/layout.css">
-      <publishTime>11/07/2017 02:26:04</publishTime>
+      <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/fonts/et-line.eot">
-      <publishTime>11/07/2017 02:26:04</publishTime>
+      <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/fonts/et-line.svg">
-      <publishTime>11/07/2017 02:26:04</publishTime>
+      <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/fonts/et-line.ttf">
-      <publishTime>11/07/2017 02:26:04</publishTime>
+      <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/fonts/et-line.woff">
-      <publishTime>11/07/2017 02:26:04</publishTime>
+      <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/fonts/fontawesome-webfont.eot">
-      <publishTime>11/07/2017 02:26:04</publishTime>
+      <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/fonts/fontawesome-webfont.svg">
-      <publishTime>11/07/2017 02:26:04</publishTime>
+      <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/fonts/fontawesome-webfont.ttf">
-      <publishTime>11/07/2017 02:26:04</publishTime>
+      <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/fonts/fontawesome-webfont.woff">
-      <publishTime>11/07/2017 02:26:04</publishTime>
+      <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/fonts/fontawesome-webfont.woff2">
-      <publishTime>11/07/2017 02:26:04</publishTime>
+      <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/fonts/FontAwesome.otf">
-      <publishTime>11/07/2017 02:26:04</publishTime>
+      <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/datatable-row-openclose.png">
-      <publishTime>11/07/2017 02:26:04</publishTime>
+      <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/17.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/9.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/9_full.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/mockups/1200x800/17-min.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/mockups/1200x800/18-min.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/mockups/1200x800/20-min.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/mockups/150x100/17-min.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/mockups/150x100/18-min.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/mockups/150x100/20-min.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/mockups/credits.txt">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/people/300x300/1-min.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/people/300x300/10-min.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/people/300x300/11-min.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/people/300x300/12-min.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/people/300x300/2-min.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/people/300x300/3-min.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/people/300x300/4-min.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/people/300x300/5-min.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/people/300x300/6-min.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/people/300x300/7-min.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/people/300x300/8-min.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/people/300x300/9-min.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/people/300x300/a-min.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/people/300x300/b-min.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/people/300x300/c-min.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/people/300x300/d-min.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/people/credits.txt">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/portfolio/thumb/a1.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/portfolio/thumb/a2.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/portfolio/thumb/a3.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/portfolio/thumb/a4.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/portfolio/thumb/a5.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/portfolio/thumb/a6.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/portfolio/thumb/a7.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/portfolio/thumb/a8.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/portfolio/thumb/small_a1.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/portfolio/thumb/small_a2.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/demo/portfolio/thumb/small_a3.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/female.png">
-      <publishTime>11/07/2017 02:26:04</publishTime>
+      <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/grabbing.png">
-      <publishTime>11/07/2017 02:26:04</publishTime>
+      <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/loaders/1.gif">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/loaders/10.gif">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/loaders/10s.gif">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/loaders/1s.gif">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/loaders/2.gif">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/loaders/2s.gif">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/loaders/3.gif">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/loaders/3s.gif">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/loaders/4.gif">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/loaders/4s.gif">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/loaders/5.gif">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/loaders/5s.gif">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/loaders/6.gif">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/loaders/6s.gif">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/loaders/7.gif">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/loaders/7s.gif">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/loaders/8.gif">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/loaders/8s.gif">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/loaders/9.gif">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/loaders/9s.gif">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/logo.fla">
-      <publishTime>11/07/2017 02:26:04</publishTime>
+      <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/logoEnodjeS.png">
-      <publishTime>11/07/2017 02:26:04</publishTime>
+      <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/logo_dark.png">
-      <publishTime>11/07/2017 02:26:04</publishTime>
+      <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/logo_light.png">
-      <publishTime>11/07/2017 02:26:04</publishTime>
+      <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/male.png">
-      <publishTime>11/07/2017 02:26:04</publishTime>
+      <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/noavatar.jpg">
-      <publishTime>11/07/2017 02:26:04</publishTime>
+      <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/patterns/none.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/patterns/parallax_overlay.png">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/patterns/pattern1.png">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/patterns/pattern10.png">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/patterns/pattern11.png">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/patterns/pattern2.png">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/patterns/pattern3.png">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/patterns/pattern4.png">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/patterns/pattern5.png">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/patterns/pattern6.png">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/patterns/pattern7.png">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/patterns/pattern8.png">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/patterns/pattern9.png">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/submenu_dark.png">
-      <publishTime>11/07/2017 02:26:04</publishTime>
+      <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/images/submenu_light.png">
-      <publishTime>11/07/2017 02:26:04</publishTime>
+      <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/js/app.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/js/custom.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/js/view/demo.calendar.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/js/view/demo.graphs.flot.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/js/view/demo.graphs.morris.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap.datepicker/css/bootstrap-datepicker.css">
       <publishTime>07/11/2017 02:26:04</publishTime>
@@ -542,46 +542,46 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap.daterangepicker/bower.json">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap.daterangepicker/daterangepicker-bs2.css">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap.daterangepicker/daterangepicker-bs3.css">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap.daterangepicker/daterangepicker.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap.daterangepicker/examples.html">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap.daterangepicker/moment.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap.daterangepicker/moment.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap.daterangepicker/package.json">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap.daterangepicker/README.md">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap.dialog/.eslintignore">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap.dialog/.eslintrc">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap.dialog/bower.json">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap.dialog/changelog.txt">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap.dialog/composer.json">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap.dialog/dist/css/bootstrap-dialog.css">
       <publishTime>07/11/2017 02:26:04</publishTime>
@@ -695,13 +695,13 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap.dialog/gulpfile.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap.dialog/package.json">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap.dialog/README.md">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap.dialog/src/css/bootstrap-dialog.css">
       <publishTime>07/11/2017 02:26:04</publishTime>
@@ -713,82 +713,82 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap/css/bootstrap-theme.css">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap/css/bootstrap-theme.css.map">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap/css/bootstrap-theme.min.css">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap/css/bootstrap.css">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap/css/bootstrap.css.map">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap/css/bootstrap.min.css">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap/fonts/glyphicons-halflings-regular.eot">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap/fonts/glyphicons-halflings-regular.svg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap/fonts/glyphicons-halflings-regular.ttf">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap/fonts/glyphicons-halflings-regular.woff">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap/fonts/glyphicons-halflings-regular.woff2">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap/js/bootstrap.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap/js/bootstrap.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap/js/npm.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap/RTL/bootstrap-flipped.css">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap/RTL/bootstrap-flipped.css.map">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap/RTL/bootstrap-flipped.min.css">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap/RTL/bootstrap-rtl.css">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap/RTL/bootstrap-rtl.css.map">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap/RTL/bootstrap-rtl.min.css">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/bootstrap/RTL/link.txt">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.chartjs/.travis.yml">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.chartjs/bower.json">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.chartjs/Chart.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.chartjs/Chart.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.chartjs/CONTRIBUTING.md">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.chartjs/docs/00-Getting-Started.md">
       <publishTime>07/11/2017 02:26:04</publishTime>
@@ -815,16 +815,16 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.chartjs/gulpfile.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.chartjs/LICENSE.md">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.chartjs/package.json">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.chartjs/README.md">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.chartjs/samples/bar.html">
       <publishTime>07/11/2017 02:26:04</publishTime>
@@ -869,196 +869,196 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.easypiechart/angular.easypiechart.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.easypiechart/angular.easypiechart.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.easypiechart/easypiechart.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.easypiechart/easypiechart.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.easypiechart/jquery.easypiechart.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.easypiechart/jquery.easypiechart.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.colorhelpers.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.colorhelpers.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.flot.animator.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.flot.canvas.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.flot.canvas.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.flot.categories.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.flot.categories.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.flot.crosshair.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.flot.crosshair.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.flot.errorbars.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.flot.errorbars.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.flot.fillbetween.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.flot.fillbetween.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.flot.growraf.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.flot.image.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.flot.image.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.flot.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.flot.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.flot.navigate.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.flot.navigate.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.flot.orderBars.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.flot.orderBars.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.flot.pie.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.flot.pie.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.flot.resize.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.flot.resize.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.flot.selection.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.flot.selection.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.flot.stack.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.flot.stack.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.flot.symbol.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.flot.symbol.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.flot.threshold.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.flot.threshold.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.flot.time.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.flot.time.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.flot/jquery.flot.tooltip.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.knob/bower.json">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.knob/dist/jquery.knob.min.js">
       <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.knob/excanvas.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.knob/index.html">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.knob/js/jquery.knob.js">
       <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.knob/knob.jquery.json">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.knob/LICENSE">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.knob/package.json">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.knob/README.md">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.knob/secretplan.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.morris/morris.css">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.morris/morris.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.morris/morris.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.sparkline/jquery.sparkline.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/chart.sparkline/jquery.sparkline.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/ckeditor/adapters/jquery.js">
       <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/ckeditor/build-config.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/ckeditor/CHANGES.md">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/ckeditor/ckeditor.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/ckeditor/config.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/ckeditor/contents.css">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/ckeditor/lang/af.js">
       <publishTime>07/11/2017 02:26:04</publishTime>
@@ -1259,7 +1259,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/ckeditor/LICENSE.md">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js">
       <publishTime>07/11/2017 02:26:04</publishTime>
@@ -1673,7 +1673,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/ckeditor/README.md">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/ckeditor/samples/ajax.html">
       <publishTime>07/11/2017 02:26:04</publishTime>
@@ -1853,10 +1853,10 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/ckeditor/styles.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/custom.fle_upload.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/datatables/css/jquery.dataTables.css">
       <publishTime>07/11/2017 02:26:04</publishTime>
@@ -1868,7 +1868,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/datatables/dataTables.bootstrap.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/datatables/extensions/AutoFill/css/dataTables.autoFill.css">
       <publishTime>07/11/2017 02:26:04</publishTime>
@@ -2480,16 +2480,16 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/dropzone/dropzone-amd-module.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/dropzone/dropzone-amd-module.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/dropzone/dropzone.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/dropzone/dropzone.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/dropzone/images/spritemap%402x.png">
       <publishTime>07/11/2017 02:26:04</publishTime>
@@ -2498,10 +2498,10 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/dropzone/readme.md">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/dropzone/upload.php">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/editor.markdown/css/bootstrap-markdown.min.css">
       <publishTime>07/11/2017 02:26:04</publishTime>
@@ -2660,19 +2660,19 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/editor.summernote/summernote-bs2.css">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/editor.summernote/summernote-bs3.css">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/editor.summernote/summernote.css">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/editor.summernote/summernote.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/editor.summernote/summernote.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/footable/css/fonts/footable.eot">
       <publishTime>07/11/2017 02:26:04</publishTime>
@@ -2759,37 +2759,37 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/footable/Update.txt">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/form.masked/jquery.maskedinput.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/form.slidebar/jquery-ui-slider-pips.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/form.stepper/jquery.stepper.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/form.validate/jquery.form.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/form.validate/jquery.validation.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/fullcalendar/fullcalendar.css">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/fullcalendar/fullcalendar.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/fullcalendar/fullcalendar.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/fullcalendar/fullcalendar.print.css">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/fullcalendar/gcal.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/fullcalendar/lang/ar-ma.js">
       <publishTime>07/11/2017 02:26:04</publishTime>
@@ -2936,37 +2936,37 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/gmaps.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/html_markdown/bootstrap-markdown.fr.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/html_markdown/bootstrap-markdown.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/html_markdown/bootstrap-markdown.kr.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/html_markdown/bootstrap-markdown.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/html_markdown/bootstrap-markdown.nl.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/html_markdown/bootstrap-markdown.ru.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/html_markdown/bootstrap-markdown.ua.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/html_summernote/summernote.css">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/html_summernote/summernote.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/html_summernote/summernote.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/jqgrid/css/ui.jqgrid.css">
       <publishTime>07/11/2017 02:26:04</publishTime>
@@ -3188,7 +3188,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/jqgrid/update.txt">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/jquery-file-upload/cors/postmessage.html">
       <publishTime>07/11/2017 02:26:04</publishTime>
@@ -3416,22 +3416,22 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/jquery-footable/Update.txt">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/jquery-vectormap/gdp-data.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/jquery-vectormap/jquery-jvectormap-1.2.2.css">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/jquery-vectormap/jquery-jvectormap-1.2.2.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/jquery-vectormap/jquery-jvectormap-world-mill-en.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/jquery.mixitup.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/jquery/images/ui-bg_diagonals-thick_18_b81900_40x40.png">
       <publishTime>07/11/2017 02:26:04</publishTime>
@@ -3476,79 +3476,79 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/jquery/jquery-2.2.3.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/jquery/jquery-2.2.3.min.map">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/jquery/jquery-ui.min.css">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/jquery/jquery-ui.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/jquery/jquery.cookie.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/jquery/jquery.ui.touch-punch.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/knob/bower.json">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/knob/dist/jquery.knob.min.js">
       <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/knob/excanvas.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/knob/index.html">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/knob/js/jquery.knob.js">
       <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/knob/knob.jquery.json">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/knob/LICENSE">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/knob/README.md">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/knob/secretplan.jpg">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/magnific-popup/jquery.magnific-popup.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/magnific-popup/jquery.magnific-popup.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/magnific-popup/magnific-popup.css">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/moment.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/nestable/index.html">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/nestable/jquery.nestable.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/nestable/README.md">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/raphael-min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/readme.txt">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/require.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/select2/css/select2.css">
       <publishTime>07/11/2017 02:26:04</publishTime>
@@ -3746,16 +3746,16 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/spectrum/readme.txt">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/spectrum/spectrum.css">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/spectrum/spectrum.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/spectrum/spectrum.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/styleswitcher/color_schemes/1.png">
       <publishTime>07/11/2017 02:26:04</publishTime>
@@ -3791,31 +3791,31 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/styleswitcher/sample.html">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/styleswitcher/styleswitcher.css">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/styleswitcher/styleswitcher.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/timepicki/timepicki.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/timepicki/timepicki.min.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/toastr/toastr.css">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/toastr/toastr.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/toastr/WARNING!.txt">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/typeahead.bundle.js">
-      <publishTime>07/11/2017 02:26:04</publishTime>
+      <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="assets/plugins/x-editable/dist/bootstrap3-editable/css/bootstrap-editable.css">
       <publishTime>07/11/2017 02:26:04</publishTime>
@@ -4106,16 +4106,16 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
-      <publishTime>11/07/2017 02:26:05</publishTime>
+      <publishTime>07/11/2017 02:26:05</publishTime>
     </File>
     <File Include="bin/comerciales.dll">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
-      <publishTime>11/07/2017 02:26:05</publishTime>
+      <publishTime>07/11/2017 02:26:05</publishTime>
     </File>
     <File Include="bin/EntityFramework.SqlServer.dll">
-      <publishTime>11/07/2017 02:26:05</publishTime>
+      <publishTime>07/11/2017 02:26:05</publishTime>
     </File>
     <File Include="bin/es/EntityFramework.resources.dll">
       <publishTime>11/07/2017 02:26:06</publishTime>
@@ -4175,52 +4175,52 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>11/07/2017 02:26:06</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
-      <publishTime>11/07/2017 02:26:06</publishTime>
+      <publishTime>07/11/2017 02:26:06</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
-      <publishTime>11/07/2017 02:26:06</publishTime>
+      <publishTime>07/11/2017 02:26:06</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
-      <publishTime>11/07/2017 02:26:06</publishTime>
+      <publishTime>07/11/2017 02:26:06</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
-      <publishTime>11/07/2017 02:26:06</publishTime>
+      <publishTime>07/11/2017 02:26:06</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.dll">
-      <publishTime>11/07/2017 02:26:06</publishTime>
+      <publishTime>07/11/2017 02:26:06</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
-      <publishTime>11/07/2017 02:26:06</publishTime>
+      <publishTime>07/11/2017 02:26:06</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
-      <publishTime>11/07/2017 02:26:06</publishTime>
+      <publishTime>07/11/2017 02:26:06</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.dll">
-      <publishTime>11/07/2017 02:26:06</publishTime>
+      <publishTime>07/11/2017 02:26:06</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.Facebook.dll">
-      <publishTime>11/07/2017 02:26:06</publishTime>
+      <publishTime>07/11/2017 02:26:06</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.Google.dll">
-      <publishTime>11/07/2017 02:26:06</publishTime>
+      <publishTime>07/11/2017 02:26:06</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.MicrosoftAccount.dll">
-      <publishTime>11/07/2017 02:26:06</publishTime>
+      <publishTime>07/11/2017 02:26:06</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
-      <publishTime>11/07/2017 02:26:06</publishTime>
+      <publishTime>07/11/2017 02:26:06</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.Twitter.dll">
-      <publishTime>11/07/2017 02:26:06</publishTime>
+      <publishTime>07/11/2017 02:26:06</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
-      <publishTime>11/07/2017 02:26:06</publishTime>
+      <publishTime>07/11/2017 02:26:06</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>11/07/2017 02:26:06</publishTime>
+      <publishTime>07/11/2017 02:26:06</publishTime>
     </File>
     <File Include="bin/Owin.dll">
-      <publishTime>11/07/2017 02:26:06</publishTime>
+      <publishTime>07/11/2017 02:26:06</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>11/07/2017 02:26:06</publishTime>
@@ -4259,100 +4259,100 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>11/07/2017 02:26:06</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
-      <publishTime>11/07/2017 02:26:06</publishTime>
+      <publishTime>07/11/2017 02:26:06</publishTime>
     </File>
     <File Include="bin/System.Web.Mvc.dll">
-      <publishTime>11/07/2017 02:26:06</publishTime>
+      <publishTime>07/11/2017 02:26:06</publishTime>
     </File>
     <File Include="bin/System.Web.Optimization.dll">
-      <publishTime>11/07/2017 02:26:06</publishTime>
+      <publishTime>07/11/2017 02:26:06</publishTime>
     </File>
     <File Include="bin/System.Web.Razor.dll">
-      <publishTime>11/07/2017 02:26:06</publishTime>
+      <publishTime>07/11/2017 02:26:06</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.Deployment.dll">
-      <publishTime>11/07/2017 02:26:06</publishTime>
+      <publishTime>07/11/2017 02:26:06</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.dll">
-      <publishTime>11/07/2017 02:26:06</publishTime>
+      <publishTime>07/11/2017 02:26:06</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.Razor.dll">
-      <publishTime>11/07/2017 02:26:06</publishTime>
+      <publishTime>07/11/2017 02:26:06</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
-      <publishTime>11/07/2017 02:26:06</publishTime>
+      <publishTime>07/11/2017 02:26:06</publishTime>
     </File>
     <File Include="Content/bootstrap.css">
-      <publishTime>11/07/2017 02:26:03</publishTime>
+      <publishTime>07/11/2017 02:26:03</publishTime>
     </File>
     <File Include="Content/bootstrap.min.css">
-      <publishTime>11/07/2017 02:26:03</publishTime>
+      <publishTime>07/11/2017 02:26:03</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>11/07/2017 02:26:03</publishTime>
+      <publishTime>07/11/2017 02:26:03</publishTime>
     </File>
     <File Include="Contexto/Model_pedidos.edmx.diagram">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="favicon.ico">
-      <publishTime>11/07/2017 02:26:05</publishTime>
-    </File>
-    <File Include="fonts/glyphicons-halflings-regular.eot">
-      <publishTime>11/07/2017 02:26:05</publishTime>
-    </File>
-    <File Include="fonts/glyphicons-halflings-regular.svg">
-      <publishTime>11/07/2017 02:26:05</publishTime>
-    </File>
-    <File Include="fonts/glyphicons-halflings-regular.ttf">
       <publishTime>07/11/2017 02:26:05</publishTime>
     </File>
-    <File Include="fonts/glyphicons-halflings-regular.woff">
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>07/11/2017 02:26:05</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>07/11/2017 02:26:05</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
       <publishTime>11/07/2017 02:26:05</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>07/11/2017 02:26:05</publishTime>
     </File>
     <File Include="Global.asax">
-      <publishTime>11/07/2017 02:26:03</publishTime>
+      <publishTime>07/11/2017 02:26:03</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>11/07/2017 02:26:05</publishTime>
+      <publishTime>07/11/2017 02:26:05</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
-      <publishTime>11/07/2017 02:26:03</publishTime>
+      <publishTime>07/11/2017 02:26:03</publishTime>
     </File>
     <File Include="Scripts/bootstrap.min.js">
-      <publishTime>11/07/2017 02:26:03</publishTime>
+      <publishTime>07/11/2017 02:26:03</publishTime>
     </File>
     <File Include="Scripts/jquery-1.10.2.js">
-      <publishTime>11/07/2017 02:26:03</publishTime>
+      <publishTime>07/11/2017 02:26:03</publishTime>
     </File>
     <File Include="Scripts/jquery-1.10.2.min.js">
-      <publishTime>11/07/2017 02:26:03</publishTime>
+      <publishTime>07/11/2017 02:26:03</publishTime>
     </File>
     <File Include="Scripts/jquery-1.10.2.min.map">
-      <publishTime>11/07/2017 02:26:03</publishTime>
+      <publishTime>07/11/2017 02:26:03</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.js">
-      <publishTime>11/07/2017 02:26:03</publishTime>
+      <publishTime>07/11/2017 02:26:03</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.min.js">
-      <publishTime>11/07/2017 02:26:03</publishTime>
+      <publishTime>07/11/2017 02:26:03</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.unobtrusive.js">
-      <publishTime>11/07/2017 02:26:03</publishTime>
+      <publishTime>07/11/2017 02:26:03</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.unobtrusive.min.js">
-      <publishTime>11/07/2017 02:26:03</publishTime>
+      <publishTime>07/11/2017 02:26:03</publishTime>
     </File>
     <File Include="Scripts/modernizr-2.6.2.js">
-      <publishTime>11/07/2017 02:26:03</publishTime>
+      <publishTime>07/11/2017 02:26:03</publishTime>
     </File>
     <File Include="Scripts/respond.js">
-      <publishTime>11/07/2017 02:26:04</publishTime>
+      <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="Scripts/respond.min.js">
-      <publishTime>11/07/2017 02:26:04</publishTime>
+      <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="Scripts/_references.js">
-      <publishTime>11/12/2017 17:54:28</publishTime>
+      <publishTime>12/11/2017 17:54:28</publishTime>
     </File>
     <File Include="Views/Account/ConfirmEmail.cshtml">
       <publishTime>11/07/2017 02:26:04</publishTime>
@@ -4429,6 +4429,9 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
     <File Include="Views/Home/Index.cshtml">
       <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
+    <File Include="Views/Login/Index.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
     <File Include="Views/Manage/AddPhoneNumber.cshtml">
       <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
@@ -4446,6 +4449,36 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
     </File>
     <File Include="Views/Manage/VerifyPhoneNumber.cshtml">
       <publishTime>11/07/2017 02:26:04</publishTime>
+    </File>
+    <File Include="Views/Pedidos/Create.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/Pedidos/Delete.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/Pedidos/Details.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/Pedidos/Edit.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/Pedidos/Index.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/PedidosDetalle/Create.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/PedidosDetalle/Delete.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/PedidosDetalle/Details.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/PedidosDetalle/Edit.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/PedidosDetalle/Index.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/Productos/Create.cshtml">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -4469,6 +4502,9 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>11/07/2017 02:26:04</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/Shared/_LayoutLogin.cshtml">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
@@ -4505,10 +4541,10 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/Web.config">
-      <publishTime>11/07/2017 02:26:04</publishTime>
+      <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="Views/_ViewStart.cshtml">
-      <publishTime>11/07/2017 02:26:04</publishTime>
+      <publishTime>07/11/2017 02:26:04</publishTime>
     </File>
     <File Include="Web.config">
       <publishTime>01/01/0001 00:00:00</publishTime>

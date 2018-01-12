@@ -38,8 +38,7 @@
                     <th class="text-center">Cod. Producto</th>
                     <th class="text-center">Nombre</th>
                     <th class="text-center">Precio Venta</th>
-                    <th class="text-center">Precio Recarga</th>
-                    <th class="text-center">Estado</th>
+                    <th class="text-center">Precio Recarga</th>                    
                     <th class="text-center">Capacidad</th>
                     <th class="text-center">Agente</th>
                     <th class="text-center">Tipo de Fuego</th>
@@ -50,7 +49,7 @@
                 {
                     <tr>
                         <td>
-                            @Html.DisplayFor(modelItem => item.cod_producto)
+                            @Html.DisplayFor(modelItem => item.id )
                         </td>
                         <td>
                             @Html.DisplayFor(modelItem => item.nombre)
@@ -60,9 +59,6 @@
                         </td>
                         <td>
                             @Html.DisplayFor(modelItem => item.precio_recarga)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.estado)
                         </td>
                         <td>
                             @Html.DisplayFor(modelItem => item.capacidad_nominal)
