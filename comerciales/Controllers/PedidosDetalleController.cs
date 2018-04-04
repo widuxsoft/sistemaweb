@@ -10,6 +10,7 @@ using comerciales.Contexto;
 
 namespace comerciales.Controllers
 {
+    [Authorize]
     public class PedidosDetalleController : Controller
     {
         private db_pedidosEntities db = new db_pedidosEntities();
@@ -55,20 +56,9 @@ namespace comerciales.Controllers
             if (ModelState.IsValid)
             {
                 tam_productos producto = db.tam_productos.Find(tar_pedidos_detall.id_producto);
-                if (tar_pedidos_detall.tipo == "C")
-                {
-                    tar_pedidos_detall.precio = producto.precio_venta;
-                }
-                else
-                {
-                    tar_pedidos_detall.precio = producto.precio_recarga;
-                }
-
-                if (producto.precio_recarga == null)
-                {
-                    tar_pedidos_detall.precio = producto.precio_venta;
-                    tar_pedidos_detall.tipo = "C";
-                }
+                tar_pedidos_detall.precio = producto.precio_venta;
+                tar_pedidos_detall.tipo = "C";
+                
                 tar_pedidos_detall.fecha_creacion = DateTime.Today;
                 tar_pedidos_detall.estado = "0";
                 tar_pedidos_detall.total = tar_pedidos_detall.precio * tar_pedidos_detall.cantidad;
@@ -109,20 +99,9 @@ namespace comerciales.Controllers
             if (ModelState.IsValid)
             {
                 tam_productos producto = db.tam_productos.Find(tar_pedidos_detall.id_producto);                  
-                if (tar_pedidos_detall.tipo == "C")
-                {
-                    tar_pedidos_detall.precio= producto.precio_venta;
-                }
-                else
-                {
-                    tar_pedidos_detall.precio = producto.precio_recarga;
-                }
-
-                if (producto.precio_recarga==null)
-                {
-                    tar_pedidos_detall.precio = producto.precio_venta;
-                    tar_pedidos_detall.tipo = "C";
-                }
+                tar_pedidos_detall.precio= producto.precio_venta;                
+                tar_pedidos_detall.tipo = "C";
+               
                 tar_pedidos_detall.fecha_estado = DateTime.Today;
                 tar_pedidos_detall.total = tar_pedidos_detall.precio * tar_pedidos_detall.cantidad;
                 db.Entry(tar_pedidos_detall).State = EntityState.Modified;

@@ -17,9 +17,9 @@ namespace comerciales.Contexto
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public tam_localidades()
         {
+            this.tam_pedidos = new HashSet<tam_pedidos>();
             this.tam_sucursales = new HashSet<tam_sucursales>();
             this.tam_clientes = new HashSet<tam_clientes>();
-            this.tam_pedidos = new HashSet<tam_pedidos>();
         }
     
         public Nullable<decimal> cod_provincia { get; set; }
@@ -28,10 +28,10 @@ namespace comerciales.Contexto
     
         public virtual tam_provincias tam_provincias { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tam_pedidos> tam_pedidos { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tam_sucursales> tam_sucursales { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tam_clientes> tam_clientes { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tam_pedidos> tam_pedidos { get; set; }
     }
 }

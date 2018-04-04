@@ -11,47 +11,40 @@ namespace comerciales.Contexto
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class tam_productos
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public tam_productos()
         {
             this.tap_productos_imagen = new HashSet<tap_productos_imagen>();
+            this.tar_colores_productos = new HashSet<tar_colores_productos>();
             this.tar_pedidos_detall = new HashSet<tar_pedidos_detall>();
         }
     
-        public decimal cod_empresa { get; set; }
-        [DisplayFormat(DataFormatString = "{0}", ApplyFormatInEditMode = true)]
-        public decimal cod_producto { get; set; }
         public string nombre { get; set; }
         public string descripcion { get; set; }
         public Nullable<decimal> precio_costo { get; set; }
         public Nullable<decimal> precio_venta { get; set; }
-        public Nullable<decimal> precio_recarga { get; set; }
         public Nullable<decimal> margen { get; set; }
         public string estado { get; set; }
         public Nullable<decimal> cod_marca { get; set; }
         public Nullable<decimal> cod_rubro { get; set; }
         public Nullable<decimal> cod_subrubro { get; set; }
         public string cod_color { get; set; }
-        public Nullable<decimal> capacidad_nominal { get; set; }
-        public Nullable<decimal> id_agente { get; set; }
-        public Nullable<decimal> id_tipo_fuego { get; set; }
         public Nullable<System.DateTime> fecha_creacion { get; set; }
-        [DisplayFormat(DataFormatString = "{0}", ApplyFormatInEditMode = true)]
         public decimal id { get; set; }
+        public Nullable<decimal> id_proveedor { get; set; }
     
-        public virtual tam_empresas tam_empresas { get; set; }
+        public virtual tam_marcas tam_marcas { get; set; }
         public virtual tam_subrubros tam_subrubros { get; set; }
         public virtual tamp_rubros tamp_rubros { get; set; }
-        public virtual tap_tablas tap_tablas { get; set; }
-        public virtual tap_tablas tap_tablas1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tap_productos_imagen> tap_productos_imagen { get; set; }
-        public virtual tam_marcas tam_marcas { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tar_colores_productos> tar_colores_productos { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tar_pedidos_detall> tar_pedidos_detall { get; set; }
+        public virtual tam_proveedores tam_proveedores { get; set; }
     }
 }

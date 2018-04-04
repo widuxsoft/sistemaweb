@@ -10,6 +10,7 @@ using comerciales.Contexto;
 
 namespace comerciales.Controllers
 {
+    [Authorize]
     public class tap_empresasController : Controller
     {
         private db_pedidosEntities db = new db_pedidosEntities();
@@ -17,7 +18,7 @@ namespace comerciales.Controllers
         // GET: tap_empresas
         public ActionResult Index()
         {
-            var tap_empresas = db.tap_empresas.Include(t => t.tam_empresas);
+            var tap_empresas = db.tap_empresas;
             return View(tap_empresas.ToList());
         }
 
@@ -38,8 +39,7 @@ namespace comerciales.Controllers
 
         // GET: tap_empresas/Create
         public ActionResult Create()
-        {
-            ViewBag.cod_empresa = new SelectList(db.tam_empresas, "cod_empresa", "nombre");
+        {            
             return View();
         }
 
@@ -48,7 +48,7 @@ namespace comerciales.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "cod_empresa,cod_parametro,descripcion,valor,id")] tap_empresas tap_empresas)
+        public ActionResult Create([Bind(Include = "cod_parametro,descripcion,valor,id")] tap_empresas tap_empresas)
         {
             if (ModelState.IsValid)
             {
@@ -57,7 +57,7 @@ namespace comerciales.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.cod_empresa = new SelectList(db.tam_empresas, "cod_empresa", "nombre", tap_empresas.cod_empresa);
+            
             return View(tap_empresas);
         }
 
@@ -73,7 +73,7 @@ namespace comerciales.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.cod_empresa = new SelectList(db.tam_empresas, "cod_empresa", "nombre", tap_empresas.cod_empresa);
+            
             return View(tap_empresas);
         }
 
@@ -82,15 +82,14 @@ namespace comerciales.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "cod_empresa,cod_parametro,descripcion,valor,id")] tap_empresas tap_empresas)
+        public ActionResult Edit([Bind(Include = "cod_parametro,descripcion,valor,id")] tap_empresas tap_empresas)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(tap_empresas).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Edit","Empresa");
-            }
-            ViewBag.cod_empresa = new SelectList(db.tam_empresas, "cod_empresa", "nombre", tap_empresas.cod_empresa);
+            }           
             return View(tap_empresas);
         }
 

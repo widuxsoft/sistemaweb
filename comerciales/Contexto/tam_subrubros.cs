@@ -20,13 +20,12 @@ namespace comerciales.Contexto
             this.tam_productos = new HashSet<tam_productos>();
         }
     
-        public decimal cod_empresa { get; set; }
         public decimal cod_rubro { get; set; }
         public decimal cod_subrubro { get; set; }
         public string descripcion { get; set; }
     
+        public virtual tamp_rubros tamp_rubros { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tam_productos> tam_productos { get; set; }
-        public virtual tamp_rubros tamp_rubros { get; set; }
     }
 }

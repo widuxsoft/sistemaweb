@@ -26,19 +26,24 @@ namespace comerciales.Contexto
         }
     
         public virtual DbSet<tam_empresas> tam_empresas { get; set; }
-        public virtual DbSet<tap_empresas> tap_empresas { get; set; }
         public virtual DbSet<tam_localidades> tam_localidades { get; set; }
+        public virtual DbSet<tam_marcas> tam_marcas { get; set; }
+        public virtual DbSet<tam_pedidos> tam_pedidos { get; set; }
         public virtual DbSet<tam_provincias> tam_provincias { get; set; }
-        public virtual DbSet<tam_sucursales> tam_sucursales { get; set; }
-        public virtual DbSet<tam_productos> tam_productos { get; set; }
         public virtual DbSet<tam_subrubros> tam_subrubros { get; set; }
+        public virtual DbSet<tam_sucursales> tam_sucursales { get; set; }
         public virtual DbSet<tamp_rubros> tamp_rubros { get; set; }
         public virtual DbSet<tap_parametros> tap_parametros { get; set; }
         public virtual DbSet<tap_productos_imagen> tap_productos_imagen { get; set; }
         public virtual DbSet<tap_tablas> tap_tablas { get; set; }
-        public virtual DbSet<tam_marcas> tam_marcas { get; set; }
-        public virtual DbSet<tam_clientes> tam_clientes { get; set; }
-        public virtual DbSet<tam_pedidos> tam_pedidos { get; set; }
         public virtual DbSet<tar_pedidos_detall> tar_pedidos_detall { get; set; }
+        public virtual DbSet<tam_clientes> tam_clientes { get; set; }
+        public virtual DbSet<tam_colores> tam_colores { get; set; }
+        public virtual DbSet<tam_productos> tam_productos { get; set; }
+        public virtual DbSet<tar_colores_productos> tar_colores_productos { get; set; }
+        public virtual DbSet<AspNetUsers> AspNetUsers { get; set; }
+        public virtual DbSet<tap_empresas> tap_empresas { get; set; }
+        public virtual DbSet<tam_proveedores> tam_proveedores { get; set; }
+        public virtual DbSet<AspNetRoles> AspNetRoles { get; set; }
     }
 }

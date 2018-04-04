@@ -25,8 +25,7 @@
             <!-- right options -->
             <ul class="options pull-right list-inline">
                 <li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="" data-placement="bottom"></a></li>
-                <li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
-                <li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="Close"><i class="fa fa-times"></i></a></li>
+                <li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="" data-placement="bottom"><i class="fa fa-expand"></i></a></li>               
             </ul>
             <!-- /right options -->
 
@@ -68,10 +67,9 @@
                         <td>
                             @Html.DisplayFor(modelItem => item.fecha_creacion )
                         </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.estado )
-                        </td>
-                        <td>
+                        <td class="text-center">
+                            @(item.estado == "0" ? "Pendiente" : "Finalizado")
+<td>
                             @Html.DisplayFor(modelItem => item.tam_clientes.caracteristica ) - @Html.DisplayFor(modelItem => item.tam_clientes.telefono)
                         </td>
                         <td>

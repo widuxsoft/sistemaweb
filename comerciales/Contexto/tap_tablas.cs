@@ -14,24 +14,9 @@ namespace comerciales.Contexto
     
     public partial class tap_tablas
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tap_tablas()
-        {
-            this.tam_productos = new HashSet<tam_productos>();
-            this.tam_productos1 = new HashSet<tam_productos>();
-            this.tam_clientes = new HashSet<tam_clientes>();
-        }
-    
         public decimal cod_tabla { get; set; }
         public string codigo { get; set; }
         public string valor { get; set; }
         public decimal id { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tam_productos> tam_productos { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tam_productos> tam_productos1 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tam_clientes> tam_clientes { get; set; }
     }
 }

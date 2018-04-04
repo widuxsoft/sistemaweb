@@ -11,18 +11,12 @@ namespace comerciales.Contexto
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class tam_sucursales
     {
-        [DisplayFormat(DataFormatString = "{0:n0}", ApplyFormatInEditMode = true)]
-        public decimal cod_empresa { get; set; }
-        [DisplayFormat(DataFormatString = "{0:n0}", ApplyFormatInEditMode = true)]
         public decimal cod_sucursal { get; set; }
         public string nombre { get; set; }
         public string calle { get; set; }
-
-        [DisplayFormat(DataFormatString = "{0:n0}", ApplyFormatInEditMode = true)]
         public Nullable<decimal> numero { get; set; }
         public string depto { get; set; }
         public string piso { get; set; }
@@ -34,7 +28,6 @@ namespace comerciales.Contexto
         public string estado { get; set; }
         public decimal id { get; set; }
     
-        public virtual tam_empresas tam_empresas { get; set; }
         public virtual tam_localidades tam_localidades { get; set; }
     }
 }

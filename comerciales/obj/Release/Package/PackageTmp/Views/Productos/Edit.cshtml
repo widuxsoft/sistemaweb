@@ -63,6 +63,14 @@
                         </div>
 
                     <div class="form-group">
+                        @Html.LabelFor(model => model.precio_costo, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.precio_costo, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.precio_costo, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
                         <div class="control-label col-md-2">Precio Venta</div>
                             <div class="col-md-10">
                                 @Html.EditorFor(model => model.precio_venta, new { htmlAttributes = new { @class = "form-control" } })
@@ -70,38 +78,38 @@
                             </div>
                         </div>
 
-                    <div class="form-group">                                                 
-                        <div class="control-label col-md-2">Precio Recarga</div>
-                                    <div class="col-md-10">
-                                        @Html.EditorFor(model => model.precio_recarga, new { htmlAttributes = new { @class = "form-control" } })
-                                        @Html.ValidationMessageFor(model => model.precio_recarga, "", new { @class = "text-danger" })
-                                    </div>
-                                </div>
-
                     <div class="form-group">
-                        <div class="control-label col-md-2">Capacidad Nominal</div>
-                            <div class="col-md-10">
-                                @Html.EditorFor(model => model.capacidad_nominal, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.capacidad_nominal, "", new { @class = "text-danger" })
-                            </div>
-                        </div>
-
-                    <div class="form-group">
-                        <div class="control-label col-md-2">Agente</div>
-                            <div class="col-md-10">
-                                @Html.DropDownList("id_agente", null, htmlAttributes: new { @class = "form-control" })
-                                @Html.ValidationMessageFor(model => model.id_agente, "", new { @class = "text-danger" })
-                            </div>
-                        </div>
-
-                    <div class="form-group">
-                        <div class="control-label col-md-2">Tipo de Fuego</div>
+                        @Html.LabelFor(model => model.cod_marca, "cod_marca", htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.DropDownList("id_tipo_fuego", null, htmlAttributes: new { @class = "form-control" })
-                            @Html.ValidationMessageFor(model => model.id_tipo_fuego, "", new { @class = "text-danger" })
+                            @Html.DropDownList("cod_marca", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.cod_marca, "", new { @class = "text-danger" })
                         </div>
                     </div>
 
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.cod_rubro, "cod_rubro", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownList("cod_rubro", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.cod_rubro, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.id_proveedor, "id_proveedor", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownList("id_proveedor", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.id_proveedor, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.estado, "estado", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownListFor(m => Model.estado, new List<SelectListItem>
+                                { new SelectListItem{Text="ACTIVO", Value="0"},
+                                    new SelectListItem{Text="INACTIVO", Value="1"}})
+
+                        </div>
+                    </div>
+                    
                     <div class="form-group">
                         <div class="control-label col-md-2">Fecha Creación</div>
                             <div class="col-md-10">
@@ -120,6 +128,127 @@
                     </div>
                 </div>
             </div>
+            <!-- /panel content -->
+
+        </div>
+
+        <div class="form-group">
+            <button type="button" class="btn btn-success" onclick="location.href= '@Url.Action("create","ColoresProductos",new { id_Producto= Model.id })'">Agregar Color</button>
+        </div>
+        <div id="panel-misc-portlet-color-r3" class="panel panel-primary">
+
+            <div class="panel-heading">
+
+                <span class="elipsis">
+                    <!-- panel title -->
+                    <strong>Datos Colores</strong>
+                </span>
+
+                <!-- right options -->
+                <ul class="options pull-right list-inline">
+                    <li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="" data-placement="bottom" ></a></li>
+                    <li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="" data-placement="bottom" ><i class="fa fa-expand"></i></a></li>                    
+                </ul>
+                <!-- /right options -->
+
+            </div>
+
+            <!-- panel content -->
+            <div class="panel-body">
+
+                <table class="table table-striped table-hover table-bordered" id="sample_editable_1">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Color</th>
+                            <th class="text-center">Acciones</th>
+                            
+                        </tr>
+                    </thead>
+
+                    @foreach (var item in Model.tar_colores_productos )
+                    {
+                        <tr>
+                            <td class="text-center">
+                                @Html.DisplayFor(modelItem => item.tam_colores.color )
+                            </td>
+                            
+                            <td class="text-center">
+                                <button type="button" class="btn btn-info btn-xs" onclick="location.href= '@Url.Action("edit","ColoresProductos",new { id=item.id })'">Editar</button>
+                                <button type="button" class="btn btn-danger btn-xs" onclick="location.href= '@Url.Action("delete","ColoresProductos",new { id=item.id })'">Eliminar</button>
+
+                            </td>
+                        </tr>
+                    }
+                </table>
+
+
+
+            </div>
+
+            <!-- /panel content -->
+
+        </div>        
+        <div class="form-group">
+            <button type="button" class="btn btn-success" onclick="location.href= '@Url.Action("create","ProductosImagen",new { id_Producto= Model.id })'">Agregar Imagen</button>
+        </div>
+        <div id="panel-misc-portlet-color-r3" class="panel panel-primary">
+
+            <div class="panel-heading">
+
+                <span class="elipsis">
+                    <!-- panel title -->
+                    <strong>Datos Imagenes</strong>
+                </span>
+
+                <!-- right options -->
+                <ul class="options pull-right list-inline">
+                    <li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="" data-placement="bottom"></a></li>
+                    <li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+                </ul>
+                <!-- /right options -->
+
+            </div>
+
+            <!-- panel content -->
+            <div class="panel-body">
+
+                <table class="table table-striped table-hover table-bordered" id="sample_editable_1">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Orden</th>
+                            <th class="text-center">Archivo</th>
+                            <th class="text-center">Principal</th>
+                            <th class="text-center">Accion</th>
+
+                        </tr>
+                    </thead>
+
+                    @foreach (var item in Model.tap_productos_imagen )
+                    {
+                        <tr>
+                            <td class="text-center">
+                                @Html.DisplayFor(modelItem => item.cod_imagen )
+                            </td>
+                            <td class="text-center">
+                                @Html.DisplayFor(modelItem => item.nombre_archivo )
+                            </td>
+                            <td class="text-center">
+                                @Html.DisplayFor(modelItem => item.principal )
+                            </td>
+
+                            <td class="text-center">
+                                <button type="button" class="btn btn-info btn-xs" onclick="location.href= '@Url.Action("edit","ColoresProductos",new { id=item.id })'">Editar</button>
+                                <button type="button" class="btn btn-danger btn-xs" onclick="location.href= '@Url.Action("delete","ColoresProductos",new { id=item.id })'">Eliminar</button>
+
+                            </td>
+                        </tr>
+                    }
+                </table>
+
+
+
+            </div>
+
             <!-- /panel content -->
 
         </div>

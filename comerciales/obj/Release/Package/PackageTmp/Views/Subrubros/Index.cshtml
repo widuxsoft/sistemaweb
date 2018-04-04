@@ -1,0 +1,40 @@
+﻿@model IEnumerable<comerciales.Contexto.tam_subrubros>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tamp_rubros.descripcion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tamp_rubros.descripcion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.cod_subrubro }) |
+            @Html.ActionLink("Details", "Details", new { id=item.cod_subrubro }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.cod_subrubro })
+        </td>
+    </tr>
+}
+
+</table>

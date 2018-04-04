@@ -11,8 +11,7 @@ namespace comerciales.Contexto
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class tam_clientes
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,9 +20,7 @@ namespace comerciales.Contexto
             this.tam_pedidos = new HashSet<tam_pedidos>();
         }
     
-        public Nullable<decimal> cod_empresa { get; set; }
         public decimal id_cliente { get; set; }
-        public Nullable<decimal> cod_tipo_doc { get; set; }
         public string apellido { get; set; }
         public string telefono { get; set; }
         public string caracteristica { get; set; }
@@ -31,7 +28,6 @@ namespace comerciales.Contexto
         public string estado { get; set; }
         public Nullable<System.DateTime> fecha_creacion { get; set; }
         public string calle { get; set; }
-        [DisplayFormat(DataFormatString = "{0}", ApplyFormatInEditMode = true)]
         public Nullable<decimal> numero { get; set; }
         public string depto { get; set; }
         public string piso { get; set; }
@@ -39,11 +35,8 @@ namespace comerciales.Contexto
         public string lote { get; set; }
         public Nullable<decimal> cod_localidad { get; set; }
         public string NOMBRE { get; set; }
-        [DisplayFormat(DataFormatString = "{0}", ApplyFormatInEditMode = true)]
         public Nullable<decimal> nro_documento { get; set; }
     
-        public virtual tap_tablas tap_tablas { get; set; }
-        public virtual tam_empresas tam_empresas { get; set; }
         public virtual tam_localidades tam_localidades { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tam_pedidos> tam_pedidos { get; set; }

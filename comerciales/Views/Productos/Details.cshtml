@@ -66,38 +66,27 @@
                     </dd>
 
                     <dt>
-                        Precio Recarga
+                        Marca
                     </dt>
-
                     <dd>
-                        @Html.EditorFor(model => model.precio_recarga, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                        @Html.EditorFor(model => model.tam_marcas.descripcion , new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
                     </dd>
-
-
                     <dt>
-                        Capacidad
+                        Rubro
                     </dt>
-
                     <dd>
-                        @Html.EditorFor(model => model.capacidad_nominal, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                        @Html.EditorFor(model => model.tamp_rubros.descripcion , new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
                     </dd>
-
                     <dt>
-                        Agente
+                        Rubro
                     </dt>
-
                     <dd>
-                        @Html.EditorFor(model => model.tap_tablas.valor , new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                        @Html.EditorFor(model => model.tam_proveedores.nombre , new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
                     </dd>
 
-                    <dt>
-                        Tipo de Fuego
-                    </dt>
 
-                    <dd>
-                        @Html.EditorFor(model => model.tap_tablas1.valor , new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
-                    </dd>
 
+                    
                     <dt>
                         Fecha Creación
                     </dt>

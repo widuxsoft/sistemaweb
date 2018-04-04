@@ -11,11 +11,13 @@ using System.Text;
 
 namespace comerciales.Controllers
 {
+    
     public class C_Tipo
     {
         public String Id { get; set; }
         public string Name { get; set; }
     }
+    [Authorize]
     public class PedidosController : Controller
     {
         private db_pedidosEntities db = new db_pedidosEntities();
@@ -23,7 +25,7 @@ namespace comerciales.Controllers
         // GET: Pedidos
         public ActionResult Index()
         {
-            var tam_pedidos = db.tam_pedidos.Include(t => t.tam_clientes).Include(t => t.tam_empresas).Include(t => t.tam_localidades).OrderByDescending(tb =>tb.id);
+            var tam_pedidos = db.tam_pedidos.Include(t => t.tam_clientes).Include(t => t.tam_localidades).OrderByDescending(tb =>tb.id);
                
 
             return View(tam_pedidos.ToList());
@@ -47,8 +49,7 @@ namespace comerciales.Controllers
         // GET: Pedidos/Create
         public ActionResult Create()
         {
-            ViewBag.id_cliente = new SelectList(db.tam_clientes, "id_cliente", "apellido");
-            ViewBag.cod_empresa = new SelectList(db.tam_empresas, "cod_empresa", "nombre");
+            ViewBag.id_cliente = new SelectList(db.tam_clientes, "id_cliente", "apellido");            
             ViewBag.cod_localidad = new SelectList(db.tam_localidades, "cod_localidad", "descripcion");
           
             return View();
@@ -59,7 +60,7 @@ namespace comerciales.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "cod_empresa,id_cliente,fecha_creacion,estado,fecha_finalizado,id,calle,numero,depto,piso,manzana,lote,cod_localidad")] tam_pedidos tam_pedidos)
+        public ActionResult Create([Bind(Include = "id_cliente,fecha_creacion,estado,fecha_finalizado,id,calle,numero,depto,piso,manzana,lote,cod_localidad")] tam_pedidos tam_pedidos)
         {
             if (ModelState.IsValid)
             {
@@ -68,8 +69,7 @@ namespace comerciales.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.id_cliente = new SelectList(db.tam_clientes, "id_cliente", "apellido", tam_pedidos.id_cliente);
-            ViewBag.cod_empresa = new SelectList(db.tam_empresas, "cod_empresa", "nombre", tam_pedidos.cod_empresa);
+            ViewBag.id_cliente = new SelectList(db.tam_clientes, "id_cliente", "apellido", tam_pedidos.id_cliente);            
             ViewBag.cod_localidad = new SelectList(db.tam_localidades, "cod_localidad", "descripcion", tam_pedidos.cod_localidad);
             return View(tam_pedidos);
         }
@@ -87,8 +87,7 @@ namespace comerciales.Controllers
                 return HttpNotFound();
             }
             
-            ViewBag.id_cliente = new SelectList(db.tam_clientes, "id_cliente", "apellido", tam_pedidos.id_cliente);
-            ViewBag.cod_empresa = new SelectList(db.tam_empresas, "cod_empresa", "nombre", tam_pedidos.cod_empresa);
+            ViewBag.id_cliente = new SelectList(db.tam_clientes, "id_cliente", "apellido", tam_pedidos.id_cliente);           
             ViewBag.cod_localidad = new SelectList(db.tam_localidades, "cod_localidad", "descripcion", tam_pedidos.cod_localidad);
 
             return View(tam_pedidos);
@@ -99,7 +98,7 @@ namespace comerciales.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "cod_empresa,id_cliente,fecha_creacion,estado,fecha_finalizado,id,calle,numero,depto,piso,manzana,lote,cod_localidad")] tam_pedidos tam_pedidos)
+        public ActionResult Edit([Bind(Include = "id_cliente,fecha_creacion,estado,fecha_finalizado,id,calle,numero,depto,piso,manzana,lote,cod_localidad")] tam_pedidos tam_pedidos)
         {
             if (ModelState.IsValid)
             {
@@ -111,8 +110,7 @@ namespace comerciales.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.id_cliente = new SelectList(db.tam_clientes, "id_cliente", "apellido", tam_pedidos.id_cliente);
-            ViewBag.cod_empresa = new SelectList(db.tam_empresas, "cod_empresa", "nombre", tam_pedidos.cod_empresa);
+            ViewBag.id_cliente = new SelectList(db.tam_clientes, "id_cliente", "apellido", tam_pedidos.id_cliente);          
             ViewBag.cod_localidad = new SelectList(db.tam_localidades, "cod_localidad", "descripcion", tam_pedidos.cod_localidad);
             return View(tam_pedidos);
         }

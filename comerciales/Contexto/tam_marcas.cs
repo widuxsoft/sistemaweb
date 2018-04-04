@@ -20,7 +20,6 @@ namespace comerciales.Contexto
             this.tam_productos = new HashSet<tam_productos>();
         }
     
-        public decimal cod_empresa { get; set; }
         public decimal cod_marca { get; set; }
         public string descripcion { get; set; }
     

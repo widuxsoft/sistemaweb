@@ -1,0 +1,65 @@
+﻿@model IEnumerable<comerciales.Contexto.AspNetUsers>
+
+@{
+    ViewBag.Title = "Usuarios";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<header id="page-header">
+    <i class="glyphicon glyphicon-user"></i>
+    <h1>  Datos de Usuarios</h1>
+</header>
+<div class="panel-heading panel-heading-transparent">
+    <p>
+        <button type="button" class="btn btn-success" onclick="location.href= '@Url.Action("register","Account")'">Agregar Usuario</button>
+    </p>
+
+    <div id="panel-misc-portlet-color-r3" class="panel panel-primary">
+
+        <div class="panel-heading">
+
+            <span class="elipsis">
+                <!-- panel title -->
+                <strong>Listado de Usuarios</strong>
+            </span>
+
+            <!-- right options -->
+            <ul class="options pull-right list-inline">
+                <li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="" data-placement="bottom"></a></li>
+                <li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+            </ul>
+            <!-- /right options -->
+
+        </div>
+
+        <!-- panel content -->
+        <div class="panel-body">
+            <table class="table table-striped table-hover table-bordered" id="sample_editable_1">
+                <tr>
+                    <th class="text-center">
+                        @Html.DisplayNameFor(model => model.Email)
+                    </th>
+                    
+                    
+                    <th class="text-center"> Acción</th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                    
+                        <td class="text-center">                            
+                            <button type="button" class="btn btn-danger btn-xs" onclick="location.href= '@Url.Action("delete",new { id=item.Id })'">Eliminar</button>
+                        </td>
+                        
+                    </tr>
+                }
+            </table>
+        </div>
+        <!-- /panel content -->
+
+    </div>
+
+</div>

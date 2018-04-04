@@ -1,0 +1,61 @@
+﻿@model comerciales.Contexto.tam_subrubros
+
+@{
+    ViewBag.Title = "Eliminar Subrubro";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header id="page-header">
+    <i class="glyphicon glyphicon-trash"></i>
+    <h1> Eliminar Subrubro</h1>
+</header>
+
+<h3>¿Está seguro que desea eliminar el subrubro seleccionado?</h3>
+<div class="panel-heading panel-heading-transparent">
+    <div id="panel-misc-portlet-color-r3" class="panel panel-primary">
+
+        <div class="panel-heading">
+
+            <span class="elipsis">
+                <!-- panel title -->
+                <strong>Datos de Subrubro</strong>
+            </span>
+
+            <!-- right options -->
+            <ul class="options pull-right list-inline">
+                <li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="" data-placement="bottom"></a></li>
+                <li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+            </ul>
+            <!-- /right options -->
+
+        </div>
+
+        <!-- panel content -->
+        <div class="panel-body">
+
+           
+            <dl class="dl-horizontal">
+                <dt>
+                    Subrubro
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.descripcion)
+                </dd>
+
+            </dl>
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <input type="submit" value="SI" class="btn btn-primary" />
+                <button type="button" class="btn btn-info " onclick="location.href= '@Url.Action("edit","Rubros",new { id=Model.cod_rubro })'">NO</button>
+            }
+
+        </div>
+        <!-- /panel content -->
+
+    </div>
+</div>
+
+

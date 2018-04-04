@@ -10,6 +10,8 @@ using comerciales.Contexto;
 
 namespace comerciales.Controllers
 {
+    [Authorize]
+    [Authorize]
     public class ClientesController : Controller
     {
         private db_pedidosEntities db = new db_pedidosEntities();
@@ -17,7 +19,7 @@ namespace comerciales.Controllers
         // GET: Clientes
         public ActionResult Index()
         {
-            var tam_clientes = db.tam_clientes.Include(t => t.tap_tablas).Include(t => t.tam_empresas).Include(t => t.tam_localidades);
+            var tam_clientes = db.tam_clientes.Include(t => t.tam_localidades);
             return View(tam_clientes.ToList());
         }
 
@@ -39,8 +41,7 @@ namespace comerciales.Controllers
         // GET: Clientes/Create
         public ActionResult Create()
         {
-            ViewBag.cod_tipo_doc = new SelectList(db.tap_tablas.Where(j => j.cod_tabla.Equals(3)), "id", "valor");
-            ViewBag.cod_empresa = new SelectList(db.tam_empresas, "cod_empresa", "nombre");
+            ViewBag.cod_tipo_doc = new SelectList(db.tap_tablas.Where(j => j.cod_tabla.Equals(3)), "id", "valor");           
             ViewBag.cod_localidad = new SelectList(db.tam_localidades, "cod_localidad", "descripcion");
             return View();
         }
@@ -50,7 +51,7 @@ namespace comerciales.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "cod_empresa,id_cliente,cod_tipo_doc,apellido,telefono,caracteristica,email,estado,fecha_creacion,calle,numero,depto,piso,manzana,lote,cod_localidad,NOMBRE,nro_documento")] tam_clientes tam_clientes)
+        public ActionResult Create([Bind(Include = "id_cliente,cod_tipo_doc,apellido,telefono,caracteristica,email,estado,fecha_creacion,calle,numero,depto,piso,manzana,lote,cod_localidad,NOMBRE,nro_documento")] tam_clientes tam_clientes)
         {
             if (ModelState.IsValid)
             {
@@ -58,8 +59,7 @@ namespace comerciales.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.cod_tipo_doc = new SelectList(db.tap_tablas.Where(j => j.cod_tabla.Equals(3)), "id", "valor");
-            ViewBag.cod_empresa = new SelectList(db.tam_empresas, "cod_empresa", "nombre", tam_clientes.cod_empresa);
+            ViewBag.cod_tipo_doc = new SelectList(db.tap_tablas.Where(j => j.cod_tabla.Equals(3)), "id", "valor");            
             ViewBag.cod_localidad = new SelectList(db.tam_localidades, "cod_localidad", "descripcion", tam_clientes.cod_localidad);
             return View(tam_clientes);
         }
@@ -75,9 +75,7 @@ namespace comerciales.Controllers
             if (tam_clientes == null)
             {
                 return HttpNotFound();
-            }
-            ViewBag.cod_tipo_doc = new SelectList(db.tap_tablas.Where(j => j.cod_tabla.Equals(3)), "id", "valor",tam_clientes.cod_tipo_doc);
-            ViewBag.cod_empresa = new SelectList(db.tam_empresas, "cod_empresa", "nombre", tam_clientes.cod_empresa);
+            }            
             ViewBag.cod_localidad = new SelectList(db.tam_localidades, "cod_localidad", "descripcion", tam_clientes.cod_localidad);
             return View(tam_clientes);
         }
@@ -87,7 +85,7 @@ namespace comerciales.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "cod_empresa,id_cliente,cod_tipo_doc,apellido,telefono,caracteristica,email,estado,fecha_creacion,calle,numero,depto,piso,manzana,lote,cod_localidad,NOMBRE,nro_documento")] tam_clientes tam_clientes)
+        public ActionResult Edit([Bind(Include = "id_cliente,apellido,telefono,caracteristica,email,estado,fecha_creacion,calle,numero,depto,piso,manzana,lote,cod_localidad,NOMBRE,nro_documento")] tam_clientes tam_clientes)
         {
             if (ModelState.IsValid)
             {
@@ -95,8 +93,7 @@ namespace comerciales.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.cod_tipo_doc = new SelectList(db.tap_tablas.Where(j => j.cod_tabla.Equals(3)), "id", "valor");
-            ViewBag.cod_empresa = new SelectList(db.tam_empresas, "cod_empresa", "nombre", tam_clientes.cod_empresa);
+            ViewBag.cod_tipo_doc = new SelectList(db.tap_tablas.Where(j => j.cod_tabla.Equals(3)), "id", "valor");            
             ViewBag.cod_localidad = new SelectList(db.tam_localidades, "cod_localidad", "descripcion", tam_clientes.cod_localidad);
             return View(tam_clientes);
         }

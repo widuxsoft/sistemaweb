@@ -10,6 +10,7 @@ using comerciales.Contexto;
 
 namespace comerciales.Controllers
 {
+    [Authorize]
     public class SucursalesController : Controller
     {
         private db_pedidosEntities db = new db_pedidosEntities();
@@ -17,7 +18,7 @@ namespace comerciales.Controllers
         // GET: Sucursales
         public ActionResult Index()
         {
-            var tam_sucursales = db.tam_sucursales.Include(t => t.tam_empresas).Include(t => t.tam_localidades);
+            var tam_sucursales = db.tam_sucursales.Include(t => t.tam_localidades);
             return View(tam_sucursales.ToList());
         }
 
@@ -38,8 +39,7 @@ namespace comerciales.Controllers
 
         // GET: Sucursales/Create
         public ActionResult Create()
-        {
-            ViewBag.cod_empresa = new SelectList(db.tam_empresas, "cod_empresa", "nombre");
+        {            
             ViewBag.cod_localidad = new SelectList(db.tam_localidades, "cod_localidad", "descripcion");
             return View();
         }
@@ -49,7 +49,7 @@ namespace comerciales.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "cod_empresa,cod_sucursal,nombre,calle,numero,depto,piso,cod_localidad,telefono,caracteristicca,mail,fecha_creacion,estado,id,caracteristica")] tam_sucursales tam_sucursales)
+        public ActionResult Create([Bind(Include = "cod_sucursal,nombre,calle,numero,depto,piso,cod_localidad,telefono,caracteristicca,mail,fecha_creacion,estado,id,caracteristica")] tam_sucursales tam_sucursales)
         {
             if (ModelState.IsValid)
             {
@@ -57,8 +57,7 @@ namespace comerciales.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
-            ViewBag.cod_empresa = new SelectList(db.tam_empresas, "cod_empresa", "nombre", tam_sucursales.cod_empresa);
+           
             ViewBag.cod_localidad = new SelectList(db.tam_localidades, "cod_localidad", "descripcion", tam_sucursales.cod_localidad);
             return View(tam_sucursales);
         }
@@ -74,8 +73,7 @@ namespace comerciales.Controllers
             if (tam_sucursales == null)
             {
                 return HttpNotFound();
-            }
-            ViewBag.cod_empresa = new SelectList(db.tam_empresas, "cod_empresa", "nombre", tam_sucursales.cod_empresa);
+            }            
             ViewBag.cod_localidad = new SelectList(db.tam_localidades, "cod_localidad", "descripcion", tam_sucursales.cod_localidad);
             return View(tam_sucursales);
         }
@@ -85,15 +83,14 @@ namespace comerciales.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "cod_empresa,cod_sucursal,nombre,calle,numero,depto,piso,cod_localidad,telefono,caracteristicca,mail,fecha_creacion,estado,id,caracteristica")] tam_sucursales tam_sucursales)
+        public ActionResult Edit([Bind(Include = "cod_sucursal,nombre,calle,numero,depto,piso,cod_localidad,telefono,caracteristicca,mail,fecha_creacion,estado,id,caracteristica")] tam_sucursales tam_sucursales)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(tam_sucursales).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
-            }
-            ViewBag.cod_empresa = new SelectList(db.tam_empresas, "cod_empresa", "nombre", tam_sucursales.cod_empresa);
+            }            
             ViewBag.cod_localidad = new SelectList(db.tam_localidades, "cod_localidad", "descripcion", tam_sucursales.cod_localidad);
             return View(tam_sucursales);
         }

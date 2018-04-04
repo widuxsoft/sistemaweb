@@ -1,0 +1,123 @@
+﻿@model comerciales.Contexto.AspNetUsers
+
+@{
+    ViewBag.Title = "Asignar Roles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+@Html.AntiForgeryToken()
+<header id="page-header">
+    <i class="glyphicon glyphicon-pencil"></i>
+    <h1> Roles de Usuario</h1>
+</header>
+<div class="panel-heading panel-heading-transparent">
+    <div id="panel-misc-portlet-color-r3" class="panel panel-primary">
+
+        <div class="panel-heading">
+
+            <span class="elipsis">
+                <!-- panel title -->
+                <strong>Datos Usuario</strong>
+            </span>
+
+            <!-- right options -->
+            <ul class="options pull-right list-inline">
+                <li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="" data-placement="bottom"></a></li>
+                <li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+            </ul>
+            <!-- /right options -->
+
+        </div>
+
+        <!-- panel content -->
+        <div class="panel-body">
+
+            <div>@Html.HiddenFor(model => model.Id)</div>
+            <div>@Html.HiddenFor(model => model.EmailConfirmed)</div>
+            <div>@Html.HiddenFor(model => model.PasswordHash)</div>
+            <div>@Html.HiddenFor(model => model.SecurityStamp)</div>
+            <div>@Html.HiddenFor(model => model.PhoneNumber)</div>
+            <div>@Html.HiddenFor(model => model.PhoneNumber)</div>
+            <div>@Html.HiddenFor(model => model.PhoneNumberConfirmed)</div>
+            <div>@Html.HiddenFor(model => model.TwoFactorEnabled)</div>
+            <div>@Html.HiddenFor(model => model.LockoutEndDateUtc)</div>
+            <div>@Html.HiddenFor(model => model.LockoutEnabled)</div>
+            <div>@Html.HiddenFor(model => model.AccessFailedCount)</div>
+            <div>@Html.HiddenFor(model => model.UserName)</div>
+            
+
+            <div class="form-group">
+                <label class="control-label col-md-2" for="cuit">Usuario</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                </div>
+            </div> 
+            
+            <button type="button" class="btn btn-info" onclick="location.href= '@Url.Action("index")'">Volver</button>
+            
+
+        </div>
+        
+        <!-- /panel content -->
+    </div>
+
+   
+    <div id="panel-misc-portlet-color-r3" class="panel panel-primary">
+
+        <div class="panel-heading">
+
+            <span class="elipsis">
+                <!-- panel title -->
+                <strong>Datos Colores</strong>
+            </span>
+
+            <!-- right options -->
+            <ul class="options pull-right list-inline">
+                <li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="" data-placement="bottom"></a></li>
+                <li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+            </ul>
+            <!-- /right options -->
+
+        </div>
+
+        <!-- panel content -->
+        <div class="panel-body">
+
+            <table class="table table-striped table-hover table-bordered" id="sample_editable_1">
+                <thead>
+                    <tr>
+                        <th class="text-center">Color</th>
+                        <th class="text-center">Acciones</th>
+
+                    </tr>
+                </thead>
+
+                @foreach (var item in Model.AspNetRoles )
+                {
+                    <tr>
+                        <td class="text-center">
+                            @Html.DisplayFor(modelItem => item.Name )
+                        </td>
+
+                        
+                    </tr>
+                }
+            </table>
+
+
+
+        </div>
+
+        <!-- /panel content -->
+
+    </div>
+    
+</div>
+
+
+
+
+}

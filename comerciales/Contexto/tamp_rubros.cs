@@ -17,18 +17,16 @@ namespace comerciales.Contexto
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public tamp_rubros()
         {
-            this.tam_productos = new HashSet<tam_productos>();
             this.tam_subrubros = new HashSet<tam_subrubros>();
+            this.tam_productos = new HashSet<tam_productos>();
         }
     
-        public decimal cod_empresa { get; set; }
         public decimal cod_rubro { get; set; }
         public string descripcion { get; set; }
     
-        public virtual tam_empresas tam_empresas { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tam_productos> tam_productos { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tam_subrubros> tam_subrubros { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tam_productos> tam_productos { get; set; }
     }
 }

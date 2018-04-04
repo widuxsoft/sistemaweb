@@ -1,12 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="db_pedidosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AspNetRoles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUsers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+    <Property Name="PasswordHash" Type="nvarchar(max)" />
+    <Property Name="SecurityStamp" Type="nvarchar(max)" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" />
+    <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="datetime" />
+    <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
   <EntityType Name="tam_clientes">
     <Key>
       <PropertyRef Name="id_cliente" />
     </Key>
-    <Property Name="cod_empresa" Type="numeric" Precision="10" Scale="0" />
     <Property Name="id_cliente" Type="numeric" Precision="10" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="cod_tipo_doc" Type="numeric" Precision="10" Scale="0" />
     <Property Name="apellido" Type="varchar" MaxLength="30" Nullable="false" />
     <Property Name="telefono" Type="varchar" MaxLength="11" />
     <Property Name="caracteristica" Type="varchar" MaxLength="5" />
@@ -22,6 +52,13 @@
     <Property Name="cod_localidad" Type="numeric" Precision="10" Scale="0" />
     <Property Name="NOMBRE" Type="varchar" MaxLength="30" />
     <Property Name="nro_documento" Type="numeric" Precision="15" Scale="0" />
+  </EntityType>
+  <EntityType Name="tam_colores">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="color" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="tam_empresas">
     <Key>
@@ -47,7 +84,6 @@
     <Key>
       <PropertyRef Name="cod_marca" />
     </Key>
-    <Property Name="cod_empresa" Type="numeric" Precision="10" Scale="0" Nullable="false" />
     <Property Name="cod_marca" Type="numeric" Precision="10" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="descripcion" Type="varchar" MaxLength="50" />
   </EntityType>
@@ -55,7 +91,6 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="cod_empresa" Type="numeric" Precision="10" Scale="0" Nullable="false" />
     <Property Name="id_cliente" Type="numeric" Precision="10" Scale="0" />
     <Property Name="fecha_creacion" Type="datetime" />
     <Property Name="estado" Type="char" MaxLength="1" />
@@ -73,24 +108,26 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="cod_empresa" Type="numeric" Precision="10" Scale="0" Nullable="false" />
-    <Property Name="cod_producto" Type="numeric" Precision="10" Scale="0" Nullable="false" />
     <Property Name="nombre" Type="varchar" MaxLength="30" />
     <Property Name="descripcion" Type="varchar" MaxLength="200" />
     <Property Name="precio_costo" Type="decimal" Precision="15" Scale="2" />
     <Property Name="precio_venta" Type="decimal" Precision="15" Scale="2" />
-    <Property Name="precio_recarga" Type="decimal" Precision="15" Scale="2" />
     <Property Name="margen" Type="numeric" Precision="4" Scale="2" />
     <Property Name="estado" Type="char" MaxLength="1" />
     <Property Name="cod_marca" Type="numeric" Precision="10" Scale="0" />
     <Property Name="cod_rubro" Type="numeric" Precision="10" Scale="0" />
     <Property Name="cod_subrubro" Type="numeric" Precision="10" Scale="0" />
     <Property Name="cod_color" Type="nchar" MaxLength="10" />
-    <Property Name="capacidad_nominal" Type="numeric" Precision="10" Scale="2" />
-    <Property Name="id_agente" Type="numeric" Precision="10" Scale="0" />
-    <Property Name="id_tipo_fuego" Type="numeric" Precision="10" Scale="0" />
     <Property Name="fecha_creacion" Type="datetime" />
     <Property Name="id" Type="numeric" Precision="10" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_proveedor" Type="numeric" Precision="10" Scale="0" />
+  </EntityType>
+  <EntityType Name="tam_proveedores">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="numeric" Precision="10" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="30" />
   </EntityType>
   <EntityType Name="tam_provincias">
     <Key>
@@ -103,7 +140,6 @@
     <Key>
       <PropertyRef Name="cod_subrubro" />
     </Key>
-    <Property Name="cod_empresa" Type="numeric" Precision="10" Scale="0" Nullable="false" />
     <Property Name="cod_rubro" Type="numeric" Precision="10" Scale="0" Nullable="false" />
     <Property Name="cod_subrubro" Type="numeric" Precision="10" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="descripcion" Type="varchar" MaxLength="30" />
@@ -112,7 +148,6 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="cod_empresa" Type="numeric" Precision="10" Scale="0" Nullable="false" />
     <Property Name="cod_sucursal" Type="numeric" Precision="10" Scale="0" Nullable="false" />
     <Property Name="nombre" Type="varchar" MaxLength="30" />
     <Property Name="calle" Type="varchar" MaxLength="30" />
@@ -131,7 +166,6 @@
     <Key>
       <PropertyRef Name="cod_rubro" />
     </Key>
-    <Property Name="cod_empresa" Type="numeric" Precision="10" Scale="0" Nullable="false" />
     <Property Name="cod_rubro" Type="numeric" Precision="10" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="descripcion" Type="varchar" MaxLength="30" />
   </EntityType>
@@ -139,11 +173,11 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="cod_empresa" Type="numeric" Precision="10" Scale="0" Nullable="false" />
     <Property Name="cod_parametro" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="descripcion" Type="varchar" MaxLength="50" />
     <Property Name="valor" Type="varchar" MaxLength="100" />
     <Property Name="id" Type="numeric" Precision="10" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="COD_EMPRESA" Type="numeric" Precision="10" Scale="0" />
   </EntityType>
   <EntityType Name="tap_parametros">
     <Key>
@@ -173,6 +207,14 @@
     <Property Name="valor" Type="varchar" MaxLength="100" />
     <Property Name="id" Type="numeric" Precision="10" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
   </EntityType>
+  <EntityType Name="tar_colores_productos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="numeric" Precision="10" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_producto" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="id_color" Type="int" Nullable="false" />
+  </EntityType>
   <EntityType Name="tar_pedidos_detall">
     <Key>
       <PropertyRef Name="id" />
@@ -188,27 +230,55 @@
     <Property Name="id" Type="numeric" Precision="10" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="id_producto" Type="numeric" Precision="10" Scale="0" />
   </EntityType>
-  <Association Name="FK_clientes_documento">
-    <End Role="tap_tablas" Type="Self.tap_tablas" Multiplicity="0..1" />
-    <End Role="tam_clientes" Type="Self.tam_clientes" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tap_tablas">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="tam_clientes">
-        <PropertyRef Name="cod_tipo_doc" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_tam_clientes_tam_empresas">
+  <Association Name="FK_COD_EMPRESA">
     <End Role="tam_empresas" Type="Self.tam_empresas" Multiplicity="0..1" />
-    <End Role="tam_clientes" Type="Self.tam_clientes" Multiplicity="*" />
+    <End Role="tap_empresas" Type="Self.tap_empresas" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tam_empresas">
         <PropertyRef Name="cod_empresa" />
       </Principal>
-      <Dependent Role="tam_clientes">
-        <PropertyRef Name="cod_empresa" />
+      <Dependent Role="tap_empresas">
+        <PropertyRef Name="COD_EMPRESA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+    <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetRoles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_productos_proveedores">
+    <End Role="tam_proveedores" Type="Self.tam_proveedores" Multiplicity="0..1" />
+    <End Role="tam_productos" Type="Self.tam_productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tam_proveedores">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tam_productos">
+        <PropertyRef Name="id_proveedor" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -248,18 +318,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_tam_pedidos_tam_empresas">
-    <End Role="tam_empresas" Type="Self.tam_empresas" Multiplicity="1" />
-    <End Role="tam_pedidos" Type="Self.tam_pedidos" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tam_empresas">
-        <PropertyRef Name="cod_empresa" />
-      </Principal>
-      <Dependent Role="tam_pedidos">
-        <PropertyRef Name="cod_empresa" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_tam_pedidos_tam_localidades">
     <End Role="tam_localidades" Type="Self.tam_localidades" Multiplicity="0..1" />
     <End Role="tam_pedidos" Type="Self.tam_pedidos" Multiplicity="*" />
@@ -269,18 +327,6 @@
       </Principal>
       <Dependent Role="tam_pedidos">
         <PropertyRef Name="cod_localidad" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_tam_productos_tam_empresas">
-    <End Role="tam_empresas" Type="Self.tam_empresas" Multiplicity="1" />
-    <End Role="tam_productos" Type="Self.tam_productos" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tam_empresas">
-        <PropertyRef Name="cod_empresa" />
-      </Principal>
-      <Dependent Role="tam_productos">
-        <PropertyRef Name="cod_empresa" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -320,30 +366,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_tam_productos_tap_tablas">
-    <End Role="tap_tablas" Type="Self.tap_tablas" Multiplicity="0..1" />
-    <End Role="tam_productos" Type="Self.tam_productos" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tap_tablas">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="tam_productos">
-        <PropertyRef Name="id_agente" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_tam_productos_tap_tablas1">
-    <End Role="tap_tablas" Type="Self.tap_tablas" Multiplicity="0..1" />
-    <End Role="tam_productos" Type="Self.tam_productos" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tap_tablas">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="tam_productos">
-        <PropertyRef Name="id_tipo_fuego" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_tam_subrubros_tamp_rubros1">
     <End Role="tamp_rubros" Type="Self.tamp_rubros" Multiplicity="1" />
     <End Role="tam_subrubros" Type="Self.tam_subrubros" Multiplicity="*" />
@@ -353,30 +375,6 @@
       </Principal>
       <Dependent Role="tam_subrubros">
         <PropertyRef Name="cod_rubro" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_tam_sucursales_tam_empresas">
-    <End Role="tam_empresas" Type="Self.tam_empresas" Multiplicity="1" />
-    <End Role="tam_sucursales" Type="Self.tam_sucursales" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tam_empresas">
-        <PropertyRef Name="cod_empresa" />
-      </Principal>
-      <Dependent Role="tam_sucursales">
-        <PropertyRef Name="cod_empresa" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_tam_sucursales_tam_empresas1">
-    <End Role="tam_empresas" Type="Self.tam_empresas" Multiplicity="1" />
-    <End Role="tam_sucursales" Type="Self.tam_sucursales" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tam_empresas">
-        <PropertyRef Name="cod_empresa" />
-      </Principal>
-      <Dependent Role="tam_sucursales">
-        <PropertyRef Name="cod_empresa" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -392,30 +390,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_tamp_rubros_tam_empresas">
-    <End Role="tam_empresas" Type="Self.tam_empresas" Multiplicity="1" />
-    <End Role="tamp_rubros" Type="Self.tamp_rubros" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tam_empresas">
-        <PropertyRef Name="cod_empresa" />
-      </Principal>
-      <Dependent Role="tamp_rubros">
-        <PropertyRef Name="cod_empresa" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_tap_empresas_tam_empresas">
-    <End Role="tam_empresas" Type="Self.tam_empresas" Multiplicity="1" />
-    <End Role="tap_empresas" Type="Self.tap_empresas" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tam_empresas">
-        <PropertyRef Name="cod_empresa" />
-      </Principal>
-      <Dependent Role="tap_empresas">
-        <PropertyRef Name="cod_empresa" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_tap_productos_imagen_tam_productos1">
     <End Role="tam_productos" Type="Self.tam_productos" Multiplicity="0..1" />
     <End Role="tap_productos_imagen" Type="Self.tap_productos_imagen" Multiplicity="*" />
@@ -424,6 +398,30 @@
         <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="tap_productos_imagen">
+        <PropertyRef Name="id_producto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tar_colores_productos_tam_colores">
+    <End Role="tam_colores" Type="Self.tam_colores" Multiplicity="1" />
+    <End Role="tar_colores_productos" Type="Self.tar_colores_productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tam_colores">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tar_colores_productos">
+        <PropertyRef Name="id_color" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tar_colores_productos_tam_productos">
+    <End Role="tam_productos" Type="Self.tam_productos" Multiplicity="1" />
+    <End Role="tar_colores_productos" Type="Self.tar_colores_productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tam_productos">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tar_colores_productos">
         <PropertyRef Name="id_producto" />
       </Dependent>
     </ReferentialConstraint>
@@ -453,12 +451,17 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="db_pedidosModelStoreContainer">
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tam_clientes" EntityType="Self.tam_clientes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tam_colores" EntityType="Self.tam_colores" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tam_empresas" EntityType="Self.tam_empresas" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tam_localidades" EntityType="Self.tam_localidades" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tam_marcas" EntityType="Self.tam_marcas" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tam_pedidos" EntityType="Self.tam_pedidos" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tam_productos" EntityType="Self.tam_productos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tam_proveedores" EntityType="Self.tam_proveedores" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tam_provincias" EntityType="Self.tam_provincias" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tam_subrubros" EntityType="Self.tam_subrubros" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tam_sucursales" EntityType="Self.tam_sucursales" Schema="dbo" store:Type="Tables" />
@@ -467,14 +470,23 @@
     <EntitySet Name="tap_parametros" EntityType="Self.tap_parametros" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tap_productos_imagen" EntityType="Self.tap_productos_imagen" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tap_tablas" EntityType="Self.tap_tablas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tar_colores_productos" EntityType="Self.tar_colores_productos" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tar_pedidos_detall" EntityType="Self.tar_pedidos_detall" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK_clientes_documento" Association="Self.FK_clientes_documento">
-      <End Role="tap_tablas" EntitySet="tap_tablas" />
-      <End Role="tam_clientes" EntitySet="tam_clientes" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tam_clientes_tam_empresas" Association="Self.FK_tam_clientes_tam_empresas">
+    <AssociationSet Name="FK_COD_EMPRESA" Association="Self.FK_COD_EMPRESA">
       <End Role="tam_empresas" EntitySet="tam_empresas" />
-      <End Role="tam_clientes" EntitySet="tam_clientes" />
+      <End Role="tap_empresas" EntitySet="tap_empresas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_productos_proveedores" Association="Self.FK_productos_proveedores">
+      <End Role="tam_proveedores" EntitySet="tam_proveedores" />
+      <End Role="tam_productos" EntitySet="tam_productos" />
     </AssociationSet>
     <AssociationSet Name="FK_tam_clientes_tam_localidades" Association="Self.FK_tam_clientes_tam_localidades">
       <End Role="tam_localidades" EntitySet="tam_localidades" />
@@ -488,17 +500,9 @@
       <End Role="tam_clientes" EntitySet="tam_clientes" />
       <End Role="tam_pedidos" EntitySet="tam_pedidos" />
     </AssociationSet>
-    <AssociationSet Name="FK_tam_pedidos_tam_empresas" Association="Self.FK_tam_pedidos_tam_empresas">
-      <End Role="tam_empresas" EntitySet="tam_empresas" />
-      <End Role="tam_pedidos" EntitySet="tam_pedidos" />
-    </AssociationSet>
     <AssociationSet Name="FK_tam_pedidos_tam_localidades" Association="Self.FK_tam_pedidos_tam_localidades">
       <End Role="tam_localidades" EntitySet="tam_localidades" />
       <End Role="tam_pedidos" EntitySet="tam_pedidos" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tam_productos_tam_empresas" Association="Self.FK_tam_productos_tam_empresas">
-      <End Role="tam_empresas" EntitySet="tam_empresas" />
-      <End Role="tam_productos" EntitySet="tam_productos" />
     </AssociationSet>
     <AssociationSet Name="FK_tam_productos_tam_marcas1" Association="Self.FK_tam_productos_tam_marcas1">
       <End Role="tam_marcas" EntitySet="tam_marcas" />
@@ -512,41 +516,25 @@
       <End Role="tamp_rubros" EntitySet="tamp_rubros" />
       <End Role="tam_productos" EntitySet="tam_productos" />
     </AssociationSet>
-    <AssociationSet Name="FK_tam_productos_tap_tablas" Association="Self.FK_tam_productos_tap_tablas">
-      <End Role="tap_tablas" EntitySet="tap_tablas" />
-      <End Role="tam_productos" EntitySet="tam_productos" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tam_productos_tap_tablas1" Association="Self.FK_tam_productos_tap_tablas1">
-      <End Role="tap_tablas" EntitySet="tap_tablas" />
-      <End Role="tam_productos" EntitySet="tam_productos" />
-    </AssociationSet>
     <AssociationSet Name="FK_tam_subrubros_tamp_rubros1" Association="Self.FK_tam_subrubros_tamp_rubros1">
       <End Role="tamp_rubros" EntitySet="tamp_rubros" />
       <End Role="tam_subrubros" EntitySet="tam_subrubros" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tam_sucursales_tam_empresas" Association="Self.FK_tam_sucursales_tam_empresas">
-      <End Role="tam_empresas" EntitySet="tam_empresas" />
-      <End Role="tam_sucursales" EntitySet="tam_sucursales" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tam_sucursales_tam_empresas1" Association="Self.FK_tam_sucursales_tam_empresas1">
-      <End Role="tam_empresas" EntitySet="tam_empresas" />
-      <End Role="tam_sucursales" EntitySet="tam_sucursales" />
     </AssociationSet>
     <AssociationSet Name="FK_tam_sucursales_tam_localidades" Association="Self.FK_tam_sucursales_tam_localidades">
       <End Role="tam_localidades" EntitySet="tam_localidades" />
       <End Role="tam_sucursales" EntitySet="tam_sucursales" />
     </AssociationSet>
-    <AssociationSet Name="FK_tamp_rubros_tam_empresas" Association="Self.FK_tamp_rubros_tam_empresas">
-      <End Role="tam_empresas" EntitySet="tam_empresas" />
-      <End Role="tamp_rubros" EntitySet="tamp_rubros" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tap_empresas_tam_empresas" Association="Self.FK_tap_empresas_tam_empresas">
-      <End Role="tam_empresas" EntitySet="tam_empresas" />
-      <End Role="tap_empresas" EntitySet="tap_empresas" />
-    </AssociationSet>
     <AssociationSet Name="FK_tap_productos_imagen_tam_productos1" Association="Self.FK_tap_productos_imagen_tam_productos1">
       <End Role="tam_productos" EntitySet="tam_productos" />
       <End Role="tap_productos_imagen" EntitySet="tap_productos_imagen" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tar_colores_productos_tam_colores" Association="Self.FK_tar_colores_productos_tam_colores">
+      <End Role="tam_colores" EntitySet="tam_colores" />
+      <End Role="tar_colores_productos" EntitySet="tar_colores_productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tar_colores_productos_tam_productos" Association="Self.FK_tar_colores_productos_tam_productos">
+      <End Role="tam_productos" EntitySet="tam_productos" />
+      <End Role="tar_colores_productos" EntitySet="tar_colores_productos" />
     </AssociationSet>
     <AssociationSet Name="FK_tar_pedidos_detall_tam_pedidos1" Association="Self.FK_tar_pedidos_detall_tam_pedidos1">
       <End Role="tam_pedidos" EntitySet="tam_pedidos" />

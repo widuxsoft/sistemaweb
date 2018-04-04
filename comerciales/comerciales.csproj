@@ -49,6 +49,14 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.0.0\lib\net451\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.0.0\lib\net451\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -135,12 +143,6 @@
     <Reference Include="Owin">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Owin">
-      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Host.SystemWeb">
-      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Owin.Security">
       <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
     </Reference>
@@ -170,6 +172,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Clases\Login.cs" />
+    <Compile Include="Contexto\AspNetRoles.cs">
+      <DependentUpon>Model_pedidos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Contexto\AspNetUsers.cs">
+      <DependentUpon>Model_pedidos.tt</DependentUpon>
+    </Compile>
     <Compile Include="Contexto\Model_pedidos.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -191,6 +199,9 @@
     <Compile Include="Contexto\tam_clientes.cs">
       <DependentUpon>Model_pedidos.tt</DependentUpon>
     </Compile>
+    <Compile Include="Contexto\tam_colores.cs">
+      <DependentUpon>Model_pedidos.tt</DependentUpon>
+    </Compile>
     <Compile Include="Contexto\tam_empresas.cs">
       <DependentUpon>Model_pedidos.tt</DependentUpon>
     </Compile>
@@ -204,6 +215,9 @@
       <DependentUpon>Model_pedidos.tt</DependentUpon>
     </Compile>
     <Compile Include="Contexto\tam_productos.cs">
+      <DependentUpon>Model_pedidos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Contexto\tam_proveedores.cs">
       <DependentUpon>Model_pedidos.tt</DependentUpon>
     </Compile>
     <Compile Include="Contexto\tam_provincias.cs">
@@ -227,18 +241,29 @@
     <Compile Include="Contexto\tap_tablas.cs">
       <DependentUpon>Model_pedidos.tt</DependentUpon>
     </Compile>
+    <Compile Include="Contexto\tar_colores_productos.cs">
+      <DependentUpon>Model_pedidos.tt</DependentUpon>
+    </Compile>
     <Compile Include="Contexto\tar_pedidos_detall.cs">
       <DependentUpon>Model_pedidos.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AspNetUsersController.cs" />
     <Compile Include="Controllers\ClientesController.cs" />
+    <Compile Include="Controllers\ColoresController.cs" />
+    <Compile Include="Controllers\ColoresProductosController.cs" />
     <Compile Include="Controllers\EmpresaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\marcasController.cs" />
     <Compile Include="Controllers\PedidosController.cs" />
     <Compile Include="Controllers\PedidosDetalleController.cs" />
     <Compile Include="Controllers\ProductosController.cs" />
+    <Compile Include="Controllers\ProductosImagenController.cs" />
+    <Compile Include="Controllers\ProveedoresController.cs" />
+    <Compile Include="Controllers\RubrosController.cs" />
+    <Compile Include="Controllers\SubrubrosController.cs" />
     <Compile Include="Controllers\SucursalesController.cs" />
     <Compile Include="Controllers\tap_empresasController.cs" />
     <Compile Include="Global.asax.cs">
@@ -284,7 +309,7 @@
     <Content Include="assets\images\loaders\8s.gif" />
     <Content Include="assets\images\loaders\9.gif" />
     <Content Include="assets\images\loaders\9s.gif" />
-    <Content Include="assets\images\logoEnodjeS.png" />
+    <Content Include="assets\images\logo.png" />
     <Content Include="assets\images\logo_dark.png" />
     <Content Include="assets\images\logo_light.png" />
     <Content Include="assets\images\male.png" />
@@ -1602,6 +1627,7 @@
     <Content Include="assets\plugins\knob\README.md" />
     <Content Include="assets\plugins\nestable\README.md" />
     <Content Include="assets\plugins\styleswitcher\color_schemes\color_scheme.fla" />
+    <None Include="Properties\PublishProfiles\Descarga.pubxml" />
     <None Include="Properties\PublishProfiles\enodjeGestion.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -1666,7 +1692,6 @@
     <Content Include="Views\Sucursales\Details.cshtml" />
     <Content Include="Views\Sucursales\Edit.cshtml" />
     <Content Include="Views\Sucursales\Index.cshtml" />
-    <Content Include="Views\Productos\Create.cshtml" />
     <Content Include="Views\Productos\Delete.cshtml" />
     <Content Include="Views\Productos\Details.cshtml" />
     <Content Include="Views\Productos\Edit.cshtml" />
@@ -1688,16 +1713,61 @@
     <Content Include="Views\PedidosDetalle\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutLogin.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Colores\Create.cshtml" />
+    <Content Include="Views\Colores\Delete.cshtml" />
+    <Content Include="Views\Colores\Details.cshtml" />
+    <Content Include="Views\Colores\Edit.cshtml" />
+    <Content Include="Views\Colores\Index.cshtml" />
+    <Content Include="Views\marcas\Create.cshtml" />
+    <Content Include="Views\marcas\Delete.cshtml" />
+    <Content Include="Views\marcas\Details.cshtml" />
+    <Content Include="Views\marcas\Edit.cshtml" />
+    <Content Include="Views\marcas\Index.cshtml" />
+    <Content Include="Views\Rubros\Create.cshtml" />
+    <Content Include="Views\Rubros\Delete.cshtml" />
+    <Content Include="Views\Rubros\Details.cshtml" />
+    <Content Include="Views\Rubros\Edit.cshtml" />
+    <Content Include="Views\Rubros\Index.cshtml" />
+    <Content Include="Views\Subrubros\Create.cshtml" />
+    <Content Include="Views\Subrubros\Delete.cshtml" />
+    <Content Include="Views\Subrubros\Details.cshtml" />
+    <Content Include="Views\Subrubros\Edit.cshtml" />
+    <Content Include="Views\Subrubros\Index.cshtml" />
+    <Content Include="Views\Productos\Create.cshtml" />
+    <Content Include="Views\ColoresProductos\Delete.cshtml" />
+    <Content Include="Views\ColoresProductos\Details.cshtml" />
+    <Content Include="Views\ColoresProductos\Edit.cshtml" />
+    <Content Include="Views\ColoresProductos\Index.cshtml" />
+    <Content Include="Views\ColoresProductos\Create.cshtml" />
+    <Content Include="Views\ProductosImagen\Create.cshtml" />
+    <Content Include="Views\ProductosImagen\Delete.cshtml" />
+    <Content Include="Views\ProductosImagen\Details.cshtml" />
+    <Content Include="Views\ProductosImagen\Edit.cshtml" />
+    <Content Include="Views\ProductosImagen\Index.cshtml" />
+    <Content Include="Views\AspNetUsers\Create.cshtml" />
+    <Content Include="Views\AspNetUsers\Delete.cshtml" />
+    <Content Include="Views\AspNetUsers\Details.cshtml" />
+    <Content Include="Views\AspNetUsers\Edit.cshtml" />
+    <Content Include="Views\AspNetUsers\Index.cshtml" />
+    <Content Include="Views\Proveedores\Create.cshtml" />
+    <Content Include="Views\Proveedores\Delete.cshtml" />
+    <Content Include="Views\Proveedores\Details.cshtml" />
+    <Content Include="Views\Proveedores\Edit.cshtml" />
+    <Content Include="Views\Proveedores\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Imagenes\" />
+    <Folder Include="Uploads\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>

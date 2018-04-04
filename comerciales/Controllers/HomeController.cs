@@ -6,11 +6,18 @@ using System.Web.Mvc;
 
 namespace comerciales.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         public ActionResult Index()
         {
-            
+            /*if (User.Identity.Name == "")
+            {
+                return RedirectToAction("Login","Account");
+
+                
+            }*/
+
             return View();
         }
 

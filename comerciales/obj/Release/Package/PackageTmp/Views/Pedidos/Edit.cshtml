@@ -42,7 +42,7 @@
                     <div class="form-group">
                         <label class="control-label col-md-2" for="cuit">Pedido</label>
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.id, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.EditorFor(model => model.id, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
                             @Html.ValidationMessageFor(model => model.id, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -50,8 +50,10 @@
                     <div class="form-group">
                         <label class="control-label col-md-2" for="cuit">Estado</label>
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.estado, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.estado, "", new { @class = "text-danger" })
+                            @Html.DropDownListFor(m => Model.estado, new List<SelectListItem>
+                                { new SelectListItem{Text="Pendiente", Value="0"},
+                                    new SelectListItem{Text="Finalizado", Value="1"}})
+
                         </div>
                     </div>
 
@@ -93,9 +95,9 @@
                         </div>
                     </div>
 
-                    @Html.HiddenFor(model => model.id)
-                    @Html.HiddenFor(model => model.cod_empresa )
+                    @Html.HiddenFor(model => model.id)                    
                     @Html.HiddenFor(model => model.id_cliente)
+                    @Html.HiddenFor(model => model.fecha_creacion)
 
                     <div class="form-group">
                         <label class="control-label col-md-2" for="cuit">Depto</label>
@@ -191,9 +193,8 @@
                         @foreach (var item in Model.tar_pedidos_detall )
                         {
                             <tr>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.tipo)
-
+                                <td class="text-center">
+                                    @(item.tipo == "C"?"Compra":"Recarga")
                                 </td>
                                 <td>
                                     @Html.DisplayFor(modelItem => item.tam_productos.nombre )

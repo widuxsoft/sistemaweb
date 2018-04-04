@@ -14,11 +14,11 @@ namespace comerciales.Contexto
     
     public partial class tap_empresas
     {
-        public decimal cod_empresa { get; set; }
         public string cod_parametro { get; set; }
         public string descripcion { get; set; }
         public string valor { get; set; }
         public decimal id { get; set; }
+        public Nullable<decimal> COD_EMPRESA { get; set; }
     
         public virtual tam_empresas tam_empresas { get; set; }
     }

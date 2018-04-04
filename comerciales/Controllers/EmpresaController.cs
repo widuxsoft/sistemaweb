@@ -10,6 +10,7 @@ using comerciales.Contexto;
 
 namespace comerciales.Controllers
 {
+    [Authorize]
     public class EmpresaController : Controller
     {
         private db_pedidosEntities db = new db_pedidosEntities();
